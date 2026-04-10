@@ -45,6 +45,9 @@ Although both are open to learning and evolving,
 - one presents
 - one explores
 
+In the beginning, both may look similar in UI and structure, but they diverge in intent: one focuses on clarity and presentation, the other on iteration, experimentation, and evolving ideas.
+a-mamal.dev allows for raw sketches and early-stage thinking, capturing the full journey of creation, from initial idea to finished form (if there is one).
+
 ---
 
 ## ⚙️ Tech Stack
