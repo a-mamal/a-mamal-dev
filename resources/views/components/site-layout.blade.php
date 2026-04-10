@@ -36,14 +36,14 @@
 
         {{-- Matomo Tracking Code (production only)  --}}
         {{-- keep this immediately before the closing </head> tag --}}
-        @include('partials.matomo')
+        {{-- @include('partials.matomo') --}}
     </head>
     <body>
         {{-- This navigation include is commented out for now --}}
         {{-- @include('layouts.navigation') --}}
 
         {{-- Site-wide header --}}
-        @include('partials.header')
+        {{-- @include('partials.header') --}}
 
         {{-- Wrapper for main content and footer (used for layout/CSS purposes) --}}
         <div class="right-wrapper">
@@ -67,7 +67,7 @@
 
             {{-- Footer --}}
             <footer>
-                @include('partials.footer')
+                {{-- @include('partials.footer') --}}
             </footer>
         </div>
     </body>
