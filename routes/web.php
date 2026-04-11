@@ -4,19 +4,19 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home');
+    return view('pages.home');
 })->name('home');
 
 Route::get('/articles', function () {
-    return view('articles');
+    return view('pages.articles');
 })->name('articles');
 
 Route::get('/lab', function () {
-    return view('lab');
+    return view('pages.lab');
 })->name('lab');
 
 Route::get('/about', function () {
-    return view('about');
+    return view('pages.about');
 })->name('about');
 
 
