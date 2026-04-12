@@ -25,7 +25,7 @@ jobs:
     - name: Setup Node
       uses: actions/setup-node@v3
       with:
-       node-version: 20
+        node-version: 20
     
     - name: Install NPM dependencies
       run: npm install
@@ -39,6 +39,7 @@ jobs:
         target-server: ${{ secrets.SSH_HOST }}
         remote-user: ${{ secrets.SSH_USER }}
         private-ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        ssh-port: 65002
         source-path: ./
         destination-path: /home/u513915023/domains/a-mamal.dev/ 
         rsync-options: >
@@ -57,6 +58,7 @@ jobs:
         target-server: ${{ secrets.SSH_HOST }}
         remote-user: ${{ secrets.SSH_USER }}
         private-ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        ssh-port: 65002
         source-path: ./public/
         destination-path: /home/u513915023/domains/a-mamal.dev/public_html/
         rsync-options: >
