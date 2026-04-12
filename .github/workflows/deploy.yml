@@ -1,0 +1,63 @@
+name: Deploy a-mamal.dev
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  web-deploy:
+    name: 🚀 Deploy Website Every Commit
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 🚚 Get Latest Code
+      uses: actions/checkout@v3
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: 8.4
+
+    - name: Install Composer
+      run: composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev
+
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+       node-version: 20
+    
+    - name: Install NPM dependencies
+      run: npm install
+
+    - name: Build assets
+      run: npm run build
+    
+    - name: Deploy via SSH
+      uses: SamKirkland/web-deploy@v1
+      with:
+        target-server: ${{ secrets.SSH_HOST }}
+        remote-user: ${{ secrets.SSH_USER }}
+        private-ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        source-path: ./
+        destination-path: /home/u513915023/domains/a-mamal.dev/ 
+        rsync-options: >
+          --archive
+          --verbose
+          --compress
+          --human-readable
+          --delete-after
+          --exclude=public
+          --exclude=node_modules
+          --exclude=.git
+
+    - name: Deploy public folder
+      uses: SamKirkland/web-deploy@v1
+      with:
+        target-server: ${{ secrets.SSH_HOST }}
+        remote-user: ${{ secrets.SSH_USER }}
+        private-ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        source-path: ./public/
+        destination-path: /home/u513915023/domains/a-mamal.dev/public_html/
+        rsync-options: >
+          --archive --verbose --compress --human-readable --delete-after
