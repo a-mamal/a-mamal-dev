@@ -119,9 +119,14 @@ If you’re here:
 
 ## 🚀 Deployment
 
-- [GitHub Actions](https://github.com/features/actions)
-- [shivammathur/setup-php](https://github.com/shivammathur/setup-php)
-- [SamKirkland/web-deploy@v1](https://github.com/SamKirkland/web-deploy)
+- Live at: https://a-mamal.dev/
+- Hosting: Hostinger.
+
+### ⚙️ Automation
+Uses GitHub Actions for CI/CD:
+  - [GitHub Actions](https://github.com/features/actions)
+  - [shivammathur/setup-php](https://github.com/shivammathur/setup-php)
+  - [SamKirkland/web-deploy@v1](https://github.com/SamKirkland/web-deploy)
 
 ## ⚙️ Deployment Flow
 
