@@ -7,6 +7,23 @@
 
 ---
 
+## 📚 Table of Contents
+
+- [🧪 Overview](#-overview)
+- [🧠 Philosophy](#-philosophy)
+- [🌐 Relationship to a-mamal.com](#-relationship-to-a-mamalcom)
+- [⚙️ Tech Stack](#-tech-stack)
+- [🧪 What’s Inside](#-whats-inside-now--evolving)
+- [🚧 Current Focus](#-current-focus)
+- [🧭 Future Ideas](#-future-ideas)
+- [🤝 Learning in Public](#-learning-in-public)
+- [🚀 Deployment](#-deployment)
+- [⚙️ Deployment Flow](#-deployment-flow)
+- [📜 License](#-license)
+- [⚠️ Note](#-note)
+
+---
+
 ## 🧪 Overview
 
 A personal **development laboratory** where ideas, UI experiments, and concepts come to life.
@@ -97,6 +114,48 @@ If you’re here:
 - feel free to explore
 - open issues with suggestions
 - or just watch things evolve
+
+---
+
+## 🚀 Deployment
+
+- [GitHub Actions](https://github.com/features/actions)
+- [shivammathur/setup-php](https://github.com/shivammathur/setup-php)
+- [SamKirkland/web-deploy@v1](https://github.com/SamKirkland/web-deploy)
+
+## ⚙️ Deployment Flow
+
+Every push to the `main` branch triggers an automated CI/CD pipeline via GitHub Actions.
+
+The process works as follows:
+
+1. 📥 **Checkout Code**
+   - The latest version of the repository is pulled.
+
+2. 🐘 **Setup PHP**
+   - PHP 8.4 environment is configured for Laravel execution using `shivammathur/setup-php@v2`.
+
+3. 📦 **Install Backend Dependencies**
+   - Composer installs production PHP dependencies.
+
+4. 🟢 **Setup Node.js**
+   - Node.js 20 is installed to support frontend tooling.
+
+5. 📦 **Install Frontend Dependencies**
+   - npm installs Vite and related build tools.
+
+6. ⚙️ **Build Assets**
+   - Vite compiles CSS and JavaScript.
+   - Generates optimized production files in `public/build/`.
+   - Creates `manifest.json` for Laravel asset mapping.
+
+7. 🚀 **Deploy Application**
+   - Laravel backend files are deployed to `/domains/a-mamal.dev/`
+   - Public-facing files are deployed to `/public_html/`
+   - Server is updated with the latest build.
+
+8. 🌐 **Live Site Update**
+   - The production site reflects the latest commit automatically.
 
 ---
 
