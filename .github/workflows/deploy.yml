@@ -48,7 +48,6 @@ jobs:
           --compress
           --human-readable
           --delete-after
-          --exclude=public
           --exclude=node_modules
           --exclude=.git
 
