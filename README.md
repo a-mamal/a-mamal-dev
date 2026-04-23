@@ -7,6 +7,23 @@
 
 ---
 
+## 📚 Table of Contents
+
+- [🧪 Overview](#-overview)
+- [🧠 Philosophy](#-philosophy)
+- [🌐 Relationship to a-mamal.com](#-relationship-to-a-mamalcom)
+- [⚙️ Tech Stack](#-tech-stack)
+- [🧪 What’s Inside](#-whats-inside-now--evolving)
+- [🚧 Current Focus](#-current-focus)
+- [🧭 Future Ideas](#-future-ideas)
+- [🤝 Learning in Public](#-learning-in-public)
+- [🚀 Deployment](#-deployment)
+- [⚙️ Deployment Flow](#-deployment-flow)
+- [📜 License](#-license)
+- [⚠️ Note](#-note)
+
+---
+
 ## 🧪 Overview
 
 A personal **development laboratory** where ideas, UI experiments, and concepts come to life.
