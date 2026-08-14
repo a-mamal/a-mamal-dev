@@ -26,13 +26,9 @@
 
         {{-- CSS --}}
         @vite('resources/css/app.css')
-        <link rel="stylesheet" href="{{ asset('css/main.css') }}">
         
         {{-- JS --}}
         @vite('resources/js/app.js')
-        <script src="{{ asset('js/main.js') }}" defer></script>
-        <script src="{{ asset('js/theme-switcher.js') }}" defer></script>
-        <script src="{{ asset('js/sidebar.js') }}" defer></script>
 
         {{-- Matomo Tracking Code (production only)  --}}
         {{-- keep this immediately before the closing </head> tag --}}
