@@ -1,64 +1,76 @@
 name: Deploy a-mamal.dev
 
-on: 
+# Run this workflow whenever you push to main
+on:
   push:
     branches:
       - main
 
 jobs:
-  web-deploy:
-    name: 🚀 Deploy Website Every Commit
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: 🚚 Get Latest Code
-      uses: actions/checkout@v3
+      # Pull code from GitHub
+      - uses: actions/checkout@v7
 
-    - name: Setup PHP
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: 8.4
+      # Set up Node and build Vite assets
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 20
 
-    - name: Install Composer
-      run: composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev
+      - name: Install NPM packages
+        run: npm ci
 
-    - name: Setup Node
-      uses: actions/setup-node@v3
-      with:
-        node-version: 20
-    
-    - name: Install NPM dependencies
-      run: npm install
+      - name: Build assets
+        run: npm run build
 
-    - name: Build assets
-      run: npm run build
-    
-    - name: Deploy via SSH
-      uses: SamKirkland/web-deploy@v1
-      with:
-        target-server: ${{ secrets.SSH_HOST }}
-        remote-user: ${{ secrets.SSH_USER }}
-        private-ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
-        ssh-port: 65002
-        source-path: ./
-        destination-path: /home/u513915023/domains/a-mamal.dev/ 
-        rsync-options: >
-          --archive
-          --verbose
-          --compress
-          --human-readable
-          --delete-after
-          --exclude=node_modules
-          --exclude=.git
+      # Deploy the Laravel application to the domain root.
+      - name: Deploy Laravel application
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.HOSTINGER_HOST }}
+          username: ${{ secrets.HOSTINGER_USER }}
+          password: ${{ secrets.HOSTINGER_PASS }}
+          protocol: ftp
+          port: 21
+          local-dir: ./
+          exclude: |
+            vendor/**
+            node_modules/**
+            .git/**
+            .github/**
+            tests/**
+          server-dir: ../
 
-    - name: Deploy public folder
-      uses: SamKirkland/web-deploy@v1
-      with:
-        target-server: ${{ secrets.SSH_HOST }}
-        remote-user: ${{ secrets.SSH_USER }}
-        private-ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
-        ssh-port: 65002
-        source-path: ./public/
-        destination-path: /home/u513915023/domains/a-mamal.dev/public_html/
-        rsync-options: >
-          --archive --verbose --compress --human-readable --delete-after
+      # Install Composer dependencies on Hostinger
+      - name: Install Composer dependencies on server
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.HOSTINGER_SSH_HOST }}
+          username: ${{ secrets.HOSTINGER_SSH_USER }}
+          password: ${{ secrets.HOSTINGER_SSH_PASSWORD }}
+          port: ${{ secrets.HOSTINGER_SSH_PORT }}
+          script: |
+            set -e
+            cd ~/domains/a-mamal.dev
+            composer2 install --no-dev --optimize-autoloader
+            php artisan optimize:clear
+            php artisan optimize
+
+      # Configure public_html symlink
+      # Hostinger uses public_html as the document root.
+      # This exposes only Laravel's public directory while keeping application files outside the web root.
+      - name: Configure public_html symlink
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.HOSTINGER_SSH_HOST }}
+          username: ${{ secrets.HOSTINGER_SSH_USER }}
+          password: ${{ secrets.HOSTINGER_SSH_PASSWORD }}
+          port: ${{ secrets.HOSTINGER_SSH_PORT }}
+          script: |
+            set -e
+            cd ~/domains/a-mamal.dev
+            rm -rf ./public_html
+            ln -s ./public public_html
