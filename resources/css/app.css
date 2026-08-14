@@ -1,3 +1,10 @@
+/*
+ * Main stylesheet for a-mamal.dev
+ *
+ * Tailwind remains available for future experiments,
+ * but the site currently uses custom CSS.
+ */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
