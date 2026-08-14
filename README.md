@@ -52,6 +52,17 @@ This project is intentionally going to be:
 
 ---
 
+## 🎯 Goals
+
+- 🧪 Explore ideas through rapid experimentation
+- 🧪 Build small systems, then break or evolve them
+- 📚 Learn by doing, not by planning too much 
+- 🔄 Iterate continuously instead of aiming for perfection
+- 🧩 Develop reusable patterns and components over time
+- 🚀 Improve real-world development workflows (CI/CD, deployment, structure)
+
+---
+
 ## 🌐 Relationship to a-mamal.com
 
 - **a-mamal.com** → structured personal website
