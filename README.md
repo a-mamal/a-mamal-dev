@@ -52,6 +52,17 @@ This project is intentionally going to be:
 
 ---
 
+## 🎯 Goals
+
+- 🧪 Explore ideas through rapid experimentation
+- 🧪 Build small systems, then break or evolve them
+- 📚 Learn by doing, not by planning too much 
+- 🔄 Iterate continuously instead of aiming for perfection
+- 🧩 Develop reusable patterns and components over time
+- 🚀 Improve real-world development workflows (CI/CD, deployment, structure)
+
+---
+
 ## 🌐 Relationship to a-mamal.com
 
 - **a-mamal.com** → structured personal website
@@ -117,11 +128,31 @@ If you’re here:
 
 ---
 
+## 🤝 Contributing
+
+Contributions are always welcome!
+
+If you'd like to help improve the project:
+
+- Check the [Project Board](https://github.com/users/a-mamal/projects/5)
+- Browse [existing issues](https://github.com/a-mamal/a-mamal-dev/issues)
+- Create a new issue if you have suggestions or found a problem
+
+If you're new and looking for something simple, you can start with [good first issues](https://github.com/a-mamal/a-mamal-dev/issues?q=is%3Aopen%20is%3Aissue%20label%3A%22good%20first%20issue%22).
+> 💡 Tip: Start small. Even documentation fixes or typos are valuable contributions.
+
+---
+
 ## 🚀 Deployment
 
-- [GitHub Actions](https://github.com/features/actions)
-- [shivammathur/setup-php](https://github.com/shivammathur/setup-php)
-- [SamKirkland/web-deploy@v1](https://github.com/SamKirkland/web-deploy)
+- Live at: https://a-mamal.dev/
+- Hosting: Hostinger.
+
+### ⚙️ Automation
+Uses GitHub Actions for CI/CD:
+  - [GitHub Actions](https://github.com/features/actions)
+  - [shivammathur/setup-php](https://github.com/shivammathur/setup-php)
+  - [SamKirkland/web-deploy@v1](https://github.com/SamKirkland/web-deploy)
 
 ## ⚙️ Deployment Flow
 
