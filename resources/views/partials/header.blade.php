@@ -24,16 +24,21 @@
             <span class="nav-label">Home</span>
         </a>
 
-        <a href="{{ route('about') }}">
-            <span class="nav-label">About</span>
+        <a href="{{ route('projects') }}">
+            <span class="nav-label">Projects</span>
         </a>
 
         <a href="{{ route('articles') }}">
             <span class="nav-label">Articles</span>
         </a>
 
+        
         <a href="{{ route('lab') }}">
             <span class="nav-label">Lab</span>
+        </a>
+
+        <a href="{{ route('about') }}">
+            <span class="nav-label">About</span>
         </a>
 
     </nav>
