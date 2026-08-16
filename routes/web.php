@@ -7,6 +7,10 @@ Route::get('/', function () {
     return view('pages.home');
 })->name('home');
 
+Route::get('/projects', function () {
+    return view('projects');
+})->name('projects');
+
 Route::get('/articles', function () {
     return view('pages.articles');
 })->name('articles');
