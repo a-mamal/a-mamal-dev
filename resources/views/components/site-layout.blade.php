@@ -39,7 +39,7 @@
         {{-- @include('layouts.navigation') --}}
 
         {{-- Site-wide header --}}
-        {{-- @include('partials.header') --}}
+        @include('partials.header')
 
         {{-- Wrapper for main content and footer (used for layout/CSS purposes) --}}
         <div class="right-wrapper">
