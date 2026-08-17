@@ -566,6 +566,12 @@ section h2 {
     margin-bottom: var(--space-xs);
 }
 
+.articles-section article h4 {
+    font-size: var(--font-size-md);
+    color: var(--color-primary);
+    margin-bottom: var(--space-xs);
+}
+
 .about-section p,
 .articles-section article p {
     font-size: var(--font-size-md);
