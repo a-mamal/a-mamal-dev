@@ -23,6 +23,9 @@ Route::get('/about', function () {
     return view('pages.about');
 })->name('about');
 
+Route::get('/docs', function () {
+    return view('pages.docs');
+})->name('docs');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
