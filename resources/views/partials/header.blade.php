@@ -41,6 +41,10 @@
             <span class="nav-label">About</span>
         </a>
 
+        <a href="{{ route('docs') }}">
+            <span class="nav-label">Docs</span>
+        </a>
+
     </nav>
 
 </header>
