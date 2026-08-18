@@ -42,11 +42,16 @@
         <h2>a-mamal.com</h2>
 
         <p>
-            Documentation for the main personal website, including its structure,
-            development process, and contribution guidelines.
+            Documentation for the main personal website, covering its structure,
+            development process, deployment, and contribution guidelines.
         </p>
         
-        <h3>Topics</h3>
+        <h3>
+            <a href="{{ route('docs.a-mamal-com') }}">
+                Documentation
+            </a>
+        </h3>
+
         <ul>
             <li>Overview</li>
             <li>Project structure</li>
