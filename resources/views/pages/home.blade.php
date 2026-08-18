@@ -1,13 +1,8 @@
 <x-site-layout
     :title="'Home'"
     :description="'Welcome to a-mamal.dev'"
-    :headerTitle="'Home'"
-    :subtitle="'Experimental development space'">
-
-    <section class="about-wrapper">
-        <h2>Welcome to a-mamal.dev.</h2>
-        <p>The sibling of a-mamal.com</p>
-    </section>
+    :headerTitle="'Welcome to a-mamal.dev'"
+    :subtitle="'Experimental development space, sibling of a-mamal.com'">
 
     <section>
 
