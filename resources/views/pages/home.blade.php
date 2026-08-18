@@ -4,7 +4,7 @@
     :headerTitle="'Welcome to a-mamal.dev'"
     :subtitle="'Experimental development space, sibling of a-mamal.com'">
 
-    <section>
+    <section class="home-section">
 
         <h2>Let's talk about this site</h2>
 
