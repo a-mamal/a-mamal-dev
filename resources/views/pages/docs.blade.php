@@ -53,11 +53,7 @@
         </h3>
 
         <ul>
-            <li>
-                <a href="{{ route('docs.com.overview') }}">
-                    Overview
-                </a>
-            </li>
+            <li>Overview</li>
             <li>Project structure</li>
             <li>Development setup</li>
             <li>Deployment</li>
