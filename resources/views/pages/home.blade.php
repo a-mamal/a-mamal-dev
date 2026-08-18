@@ -11,7 +11,12 @@
         <h3>Why a-mamal.dev?</h3>
 
         <p>
-            In case you didn't know, there's already a-mamal.com but it is meant to be a minimal overview of myself, 
+            In case you didn't know, there's already 
+            <a  href="https://a-mamal.com" 
+                target="_blank"
+                rel="noopener">   
+                a-mamal.com
+            </a> but it is meant to be a minimal overview of myself, 
             more professional although still with personality. 
             The scope, however, does not allow for many details and experiments.
             The idea of giving a-mamal.dev a different approach came to mind almost at the same time as the initial site was live.
@@ -40,7 +45,14 @@
             So, for this site, 
             I thought I'd hurry up and just deploy it so I can document whatever needs to be documented, 
             or whatever I simply want to document, from the beginning.
-            I do keep documentation in README files, they live on GitHub for my projects,
+            I do keep documentation in README files; they live on 
+            <a 
+                href="https://github.com/a-mamal?tab=repositories" 
+                target="_blank"
+                rel="noopener noreferrer">
+                my GitHub repositories
+            </a> 
+            for my projects,
             but I really wanted more than...something that happens as it happens.
         </p>
 
