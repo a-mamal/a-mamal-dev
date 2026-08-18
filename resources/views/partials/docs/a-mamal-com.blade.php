@@ -8,7 +8,34 @@
         <h2>Overview</h2>
 
         <p>
-            ...
+            a-mamal.com is my personal website and portfolio. It brings together
+            information about my background, projects, experience, and the things
+            I am currently learning and building.
+        </p>
+
+        <p>
+            The site is also a project in itself. Rather than treating the website
+            as a finished product, I use it to experiment with technologies,
+            improve my development practices, and expand my knowledge as I go.
+        </p>
+
+
+        <h3>Technologies</h3>
+
+        <p>
+            The website is built with PHP and Laravel, using Blade for its views and
+            MariaDB for data storage. JavaScript and CSS handle the frontend, while
+            Vite manages frontend assets. Git and GitHub are used for version control,
+            with GitHub Actions handling deployment.
+        </p>
+
+
+        <h3>Purpose</h3>
+
+        <p>
+            The goal of a-mamal.com is not only to serve as a portfolio, but also
+            to provide a practical example of how I approach building, maintaining,
+            and improving a real web project.
         </p>
     </section>
 
