@@ -1,19 +1,14 @@
 <x-site-layout
     :title="'Home'"
     :description="'Welcome to a-mamal.dev'"
-    :headerTitle="'Home'"
-    :subtitle="'Experimental development space'">
+    :headerTitle="'Welcome to a-mamal.dev'"
+    :subtitle="'Experimental development space, sibling of a-mamal.com'">
 
-    <section class="about-wrapper">
-        <h2>Welcome to a-mamal.dev.</h2>
-        <p>The sibling of a-mamal.com</p>
-    </section>
+    <section class="home-section">
 
-    <section>
+        <h2>Let's talk about this site</h2>
 
-        <h3>Let's talk about this site</h3>
-
-        <h4>Why a-mamal.dev?</h4>
+        <h3>Why a-mamal.dev?</h3>
 
         <p>
             In case you didn't know, there's already a-mamal.com but it is meant to be a minimal overview of myself, 
@@ -29,7 +24,7 @@
         </p>
     
 
-        <h4>Why is it deployed in its first stages?</h4>
+        <h3>Why is it deployed in its first stages?</h3>
 
         <p> I've been thinking of it almost since a-mamal.com was deployed, back when it was still in its first stages. 
             There are a few reasons for that. Both sites were created under the concept of "learning in public", 
