@@ -5,7 +5,14 @@
     :subtitle="'An experimental space for building, breaking, and learning in public.'">
 
     <p>
-        It exists alongside a-mamal.com, but with a different goal — exploration over presentation.
+        It exists alongside     
+        <a
+            href="https://a-mamal.com"
+            target="_blank"
+            rel="noopener">
+            a-mamal.com
+        </a>
+        , but with a different goal — exploration over presentation.
     </p>
 
     <p>

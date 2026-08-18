@@ -22,7 +22,14 @@
                 <h4>Why another site?</h4>
 
                 <p>
-                    If you didn't know, there is already a-mamal.com. It is the first dynamic
+                    If you didn't know, there is already 
+                    <a
+                        href="https://a-mamal.com"
+                        target="_blank"
+                        rel="noopener">
+                        a-mamal.com
+                    </a>.
+                    It is the first dynamic
                     version of my personal website, and it has a rather different purpose.
                 </p>
 
@@ -71,7 +78,14 @@
                 <p>
                     I do keep notes. I have README files that I try to keep
                     as detailed as a README can be, and they live
-                    on GitHub. I also have my own ways of keeping track of things, 
+                    on     
+                    <a
+                        href="https://github.com/a-mamal"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        GitHub
+                    </a>. 
+                    I also have my own ways of keeping track of things, 
                     which could be an article on its own.                    
                     But those are mostly useful for documenting a project or for
                     reminding myself about something later.

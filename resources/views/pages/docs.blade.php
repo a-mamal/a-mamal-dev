@@ -8,7 +8,14 @@
             <h2>Why Docs?</h2>
 
             <p>
-                This is where I document how a-mamal.com and a-mamal.dev are
+                This is where I document how 
+                <a
+                    href="https://a-mamal.com"
+                    target="_blank"
+                    rel="noopener">
+                    a-mamal.com
+                </a>
+                and a-mamal.dev are
                 structured, developed, and maintained.
             </p>
 
