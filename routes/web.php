@@ -27,6 +27,10 @@ Route::get('/docs', function () {
     return view('pages.docs');
 })->name('docs');
 
+Route::get('/docs/a-mamal-com/overview', function () {
+    return view('partials.docs.a-mamal-com.overview');
+})->name('docs.com.overview');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

@@ -48,7 +48,11 @@
         
         <h3>Topics</h3>
         <ul>
-            <li>Overview</li>
+            <li>
+                <a href="{{ route('docs.com.overview') }}">
+                    Overview
+                </a>
+            </li>
             <li>Project structure</li>
             <li>Development setup</li>
             <li>Deployment</li>
