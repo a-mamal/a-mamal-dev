@@ -202,6 +202,8 @@
             
         </article>
 
+        @include('partials.articles.logos-v1')
+
     </section>
 
 </x-site-layout>
