@@ -29,13 +29,13 @@ Route::get('/about', function () {
     return view('pages.about');
 })->name('about');
 
-Route::get('/docs', function () {
-    return view('pages.docs');
-})->name('docs');
+Route::get('/documentation', function () {
+    return view('pages.documentation');
+})->name('documentation');
 
-Route::get('/docs/a-mamal-com', function () {
-    return view('partials.docs.a-mamal-com');
-})->name('docs.a-mamal-com');
+Route::get('/documentation/a-mamal-com', function () {
+    return view('partials.documentation.a-mamal-com');
+})->name('documentation.a-mamal-com');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
