@@ -29,17 +29,21 @@ Route::get('/about', function () {
     return view('pages.about');
 })->name('about');
 
+
+// Documentation
+
 Route::get('/documentation', function () {
     return view('pages.documentation.index');
 })->name('documentation');
 
 Route::get('/documentation/a-mamal-dev', function () {
-    return view('pages.documentation.a-mamal-dev');
+    return view('pages.documentation.a-mamal-dev.index');
 })->name('documentation.a-mamal-dev');
 
 Route::get('/documentation/a-mamal-com', function () {
     return view('partials.documentation.a-mamal-com');
 })->name('documentation.a-mamal-com');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
