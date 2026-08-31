@@ -30,7 +30,7 @@ Route::get('/about', function () {
 })->name('about');
 
 Route::get('/documentation', function () {
-    return view('pages.documentation');
+    return view('pages.documentation.index');
 })->name('documentation');
 
 Route::get('/documentation/a-mamal-com', function () {
