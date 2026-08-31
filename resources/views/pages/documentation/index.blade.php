@@ -1,11 +1,11 @@
 <x-site-layout
-    :title="'Docs'"
+    :title="'Documentation'"
     :description="'Documentation for a-mamal.com and a-mamal.dev'"
-    :headerTitle="'Docs'"
+    :headerTitle="'Documentation'"
     :subtitle="'Documentation, structure, development notes, and contribution guidelines.'">
 
     <section class="docs-section">
-            <h2>Why Docs?</h2>
+            <h2>Why Documentation?</h2>
 
             <p>
                 This is where I document how 
@@ -54,7 +54,7 @@
         </p>
         
         <h3>
-            <a href="{{ route('docs.a-mamal-com') }}">
+            <a href="{{ route('documentation.a-mamal-com') }}">
                 Documentation
             </a>
         </h3>
