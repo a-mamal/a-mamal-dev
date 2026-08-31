@@ -6,7 +6,7 @@
     :headerTitle="$article->title"
     :subtitle="$article->excerpt">
 
-    <article>
+    <article class="article-content">
         {!! $article->content !!}
     </article>
 
