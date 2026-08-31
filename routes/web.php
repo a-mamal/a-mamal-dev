@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -11,9 +12,14 @@ Route::get('/projects', function () {
     return view('pages.projects');
 })->name('projects');
 
-Route::get('/articles', function () {
-    return view('pages.articles');
-})->name('articles');
+// Articles
+
+Route::get('/articles', [ArticleController::class, 'index'])
+    ->name('articles');
+
+Route::get('/articles/{slug}', [ArticleController::class, 'show'])
+    ->name('articles.show');
+
 
 Route::get('/lab', function () {
     return view('pages.lab');

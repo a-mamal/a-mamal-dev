@@ -637,6 +637,42 @@ section h2 {
     color: var(--color-text-primary-70);
 }
 
+/* -------------------- Individual Article Page -------------------- */
+
+.article-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    line-height: var(--line-height-lg);
+}
+
+.article-content h2 {
+    margin-top: var(--space-md);
+    font-size: var(--font-size-xl);
+    color: var(--color-primary);
+}
+
+.article-content p {
+    font-size: var(--font-size-md);
+    color: var(--color-text-primary);
+}
+
+.article-content a {
+    color: var(--color-primary);
+}
+
+.article-content a:hover {
+    color: var(--color-secondary);
+}
+
+.article-content blockquote {
+    margin: var(--space-sm) 0;
+    padding-left: var(--space-md);
+    border-left: 3px solid var(--color-secondary);
+    color: var(--color-text-primary-70);
+    font-style: italic;
+}
+
 /* -------------------- Contact Page -------------------- */
 
 .contact-section {
