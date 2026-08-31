@@ -12,8 +12,14 @@ Route::get('/projects', function () {
     return view('pages.projects');
 })->name('projects');
 
+// Articles
+
 Route::get('/articles', [ArticleController::class, 'index'])
     ->name('articles');
+
+Route::get('/articles/{slug}', [ArticleController::class, 'show'])
+    ->name('articles.show');
+
 
 Route::get('/lab', function () {
     return view('pages.lab');
