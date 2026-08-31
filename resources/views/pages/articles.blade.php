@@ -7,6 +7,18 @@
     <section class="articles-section">
         <h2>Latest articles</h2>
 
+        @foreach ($articles as $article)
+            <article>
+                <header>
+                    <h3>{{ $article->title }}</h3>
+
+                    <p>
+                        {{ $article->excerpt }}
+                    </p>
+                </header>
+            </article>
+        @endforeach
+
     </section>
 
 </x-site-layout>
