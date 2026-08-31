@@ -10,7 +10,11 @@
         @foreach ($articles as $article)
             <article>
                 <header>
-                    <h3>{{ $article->title }}</h3>
+                    <h3>
+                        <a href="{{ route('articles.show', $article->slug) }}">
+                            {{ $article->title }}
+                        </a>
+                    </h3>
 
                     <p>
                         {{ $article->excerpt }}
