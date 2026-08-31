@@ -37,7 +37,7 @@ Route::get('/documentation', function () {
 })->name('documentation');
 
 Route::get('/documentation/a-mamal-dev', function () {
-    return view('pages.documentation.a-mamal-dev.index');
+    return view('pages.documentation.a-mamal-dev');
 })->name('documentation.a-mamal-dev');
 
 Route::get('/documentation/a-mamal-com', function () {
