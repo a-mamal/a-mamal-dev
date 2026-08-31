@@ -7,8 +7,6 @@
     <section class="articles-section">
         <h2>Latest articles</h2>
 
-        @include('partials.articles.logos-v1')
-
     </section>
 
 </x-site-layout>
