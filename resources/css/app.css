@@ -178,6 +178,12 @@ h1 {
     line-height: var(--line-height-xxl);
 }
 
+h2 {
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-xl);
+    color: var(--color-primary);
+}
+
 /* ------------------ Main Header (Sidebar) ------------------ */
 
 .main-header{
@@ -399,12 +405,6 @@ section:hover {
     border-color: var(--color-border-card);
 }
 
-section h2 {
-    margin-bottom: var(--space-sm);
-    font-size: var(--font-size-xl);
-    color: var(--color-primary);
-}
-
 /* Page header */
 
 .page-header {
@@ -575,8 +575,7 @@ section h2 {
 
 .home-section h3,
 .about-section h3,
-.articles-section article h3,
-.docs-section h2 {
+.articles-section article h3 {
     font-size: var(--font-size-lg);
     color: var(--color-primary);
     margin-bottom: var(--space-xs);
@@ -636,12 +635,6 @@ section h2 {
     flex-direction: column;
     gap: var(--space-md);
     line-height: var(--line-height-lg);
-}
-
-.article-content h2 {
-    margin-top: var(--space-md);
-    font-size: var(--font-size-xl);
-    color: var(--color-primary);
 }
 
 .article-content p {
