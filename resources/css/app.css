@@ -171,6 +171,31 @@ body {
     background-color: var(--color-background);
 }
 
+/* -------------------- Typography -------------------- */
+
+h1 {
+    font-size: var(--font-size-xxl);
+    line-height: var(--line-height-xxl);
+}
+
+h2 {
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-xl);
+    color: var(--color-primary);
+}
+
+h3 {
+    font-size: var(--font-size-lg);
+    color: var(--color-primary);
+    margin-bottom: var(--space-xs);
+}
+
+h4 {
+    font-size: var(--font-size-md);
+    color: var(--color-primary);
+    margin-bottom: var(--space-xs);
+}
+
 /* ------------------ Main Header (Sidebar) ------------------ */
 
 .main-header{
@@ -371,13 +396,25 @@ footer{
 /* ---------------- Section & Headers ------------------- */
 
 section {
+    display: flex;
+    flex-direction: column;
     margin: var(--space-md) 0;
+    padding: var(--space-lg);
+    border-radius: 8px;
+    border: 1px solid var(--color-border-section);
+    background-color: var(--color-surface-30);
+    box-shadow: var(--shadow-card-sm);
+    gap: var(--space-md);
+    transition: 
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
 }
 
-section h2 {
-    margin-bottom: var(--space-sm);
-    font-size: var(--font-size-xl);
-    color: var(--color-primary);
+section:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card-md);
+    border-color: var(--color-border-card);
 }
 
 /* Page header */
@@ -395,11 +432,6 @@ section h2 {
     margin-bottom: var(--space-xl);
     gap: var(--space-sm);
     color: var(--color-white);
-}
-
-.page-header h1 {
-    font-size: var(--font-size-xxl);
-    margin-bottom: var(--space-sm);
 }
 
 .page-header p {
@@ -553,49 +585,6 @@ section h2 {
     gap: var(--space-md);
 }
 
-.home-section,
-.about-section,
-.articles-section article,
-.docs-section {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: var(--space-md);
-    border-radius: 8px;
-    border: 1px solid var(--color-border-section);
-    background-color: var(--color-surface-30);
-    box-shadow: var(--shadow-card-sm);
-    gap: var(--space-sm);
-    transition: 
-        transform 0.2s ease,
-        box-shadow 0.2s ease,
-        border-color 0.2s ease;
-}
-
-.home-section:hover,
-.about-section:hover,
-.articles-section article:hover,
-.docs-section:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-card-md);
-    border-color: var(--color-border-card);
-}
-
-.home-section h3,
-.about-section h3,
-.articles-section article h3,
-.docs-section h2 {
-    font-size: var(--font-size-lg);
-    color: var(--color-primary);
-    margin-bottom: var(--space-xs);
-}
-
-.articles-section article h4 {
-    font-size: var(--font-size-md);
-    color: var(--color-primary);
-    margin-bottom: var(--space-xs);
-}
-
 .home-section p,
 .about-section p,
 .articles-section article p {
@@ -644,12 +633,6 @@ section h2 {
     flex-direction: column;
     gap: var(--space-md);
     line-height: var(--line-height-lg);
-}
-
-.article-content h2 {
-    margin-top: var(--space-md);
-    font-size: var(--font-size-xl);
-    color: var(--color-primary);
 }
 
 .article-content p {
