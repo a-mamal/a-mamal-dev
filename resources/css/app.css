@@ -371,7 +371,25 @@ footer{
 /* ---------------- Section & Headers ------------------- */
 
 section {
+    display: flex;
+    flex-direction: column;
     margin: var(--space-md) 0;
+    padding: var(--space-md);
+    border-radius: 8px;
+    border: 1px solid var(--color-border-section);
+    background-color: var(--color-surface-30);
+    box-shadow: var(--shadow-card-sm);
+    gap: var(--space-sm);
+    transition: 
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+section:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card-md);
+    border-color: var(--color-border-card);
 }
 
 section h2 {
@@ -551,34 +569,6 @@ section h2 {
     display: flex;
     flex-direction: column;
     gap: var(--space-md);
-}
-
-.home-section,
-.about-section,
-.articles-section article,
-.docs-section {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: var(--space-md);
-    border-radius: 8px;
-    border: 1px solid var(--color-border-section);
-    background-color: var(--color-surface-30);
-    box-shadow: var(--shadow-card-sm);
-    gap: var(--space-sm);
-    transition: 
-        transform 0.2s ease,
-        box-shadow 0.2s ease,
-        border-color 0.2s ease;
-}
-
-.home-section:hover,
-.about-section:hover,
-.articles-section article:hover,
-.docs-section:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-card-md);
-    border-color: var(--color-border-card);
 }
 
 .home-section h3,
