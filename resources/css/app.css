@@ -190,6 +190,12 @@ h3 {
     margin-bottom: var(--space-xs);
 }
 
+h4 {
+    font-size: var(--font-size-md);
+    color: var(--color-primary);
+    margin-bottom: var(--space-xs);
+}
+
 /* ------------------ Main Header (Sidebar) ------------------ */
 
 .main-header{
@@ -577,12 +583,6 @@ section:hover {
     display: flex;
     flex-direction: column;
     gap: var(--space-md);
-}
-
-.articles-section article h4 {
-    font-size: var(--font-size-md);
-    color: var(--color-primary);
-    margin-bottom: var(--space-xs);
 }
 
 .home-section p,
