@@ -1,91 +1,60 @@
 <x-site-layout
     :title="'Documentation'"
-    :description="'Documentation for a-mamal.com and a-mamal.dev'"
+    :description="'Development documentation, technical notes, and project documentation.'"
     :headerTitle="'Documentation'"
     :subtitle="'Documentation, structure, development notes, and contribution guidelines.'">
 
     <section class="docs-section">
-            <h2>Why Documentation?</h2>
+        <h2>Where did I land?</h2>
 
-            <p>
-                This is where I document how 
-                <a
-                    href="https://a-mamal.com"
-                    target="_blank"
-                    rel="noopener">
-                    a-mamal.com
-                </a>
-                and a-mamal.dev are
-                structured, developed, and maintained.
-            </p>
+        <p>
+            This is where I document how projects are
+            structured, developed, and maintained.
+        </p>
 
+        <p> 
+            Most documentation will be specific to a project. 
+            Other notes will cover development concepts, tools, workflows, 
+            technical decisions, and problems I have encountered along the way. 
+        </p>
 
-            <p>
-                Both a-mamal.com and a-mamal.dev are projects in their own right.
-                They have their own structure, decisions, problems, experiments,
-                and ways of doing things.
-            </p>
+        <p> 
+            Not everything here is meant to be a polished tutorial. 
+            Sometimes the point is simply to record why something was done a particular way, 
+            what I learned from it, 
+            or what I might need to remember later. 
+        </p>
 
-            <p>
-                This is where I keep track of that stuff.
-            </p>
-
-            <p>
-                Some of it is useful if you want to understand how the sites work.
-                Some of it might be useful if you want to contribute. And some of it
-                is probably here because I know future me is going to forget why
-                something was done a particular way.
-            </p>
-
-            <p>
-                The documentation will grow alongside the projects and cover
-                everything from project structure and development setup to
-                contribution guidelines and technical decisions.
-            </p>
-
+        <p> 
+            This documentation will grow alongside the projects, the experiments, 
+            and everything else I learn along the way. 
+        </p>
     </section>
 
     <section class="docs-section">
-        <h2>a-mamal.com</h2>
+        <h2>Projects</h2>
 
-        <p>
-            Documentation for the main personal website, covering its structure,
-            development process, deployment, and contribution guidelines.
+        <p> 
+            Each project has its own documentation 
+            covering its structure, development, technical decisions, 
+            and other project-specific notes. 
         </p>
-        
-        <h3>
-            <a href="{{ route('documentation.a-mamal-com') }}">
-                Documentation
-            </a>
-        </h3>
 
-        <ul>
-            <li>Overview</li>
-            <li>Project structure</li>
-            <li>Development setup</li>
-            <li>Deployment</li>
-            <li>Contributing</li>
-        </ul>
+        <h3> 
+            <a href="{{ route('documentation.a-mamal-com') }}"> a-mamal.com </a> 
+        </h3> 
+        
+        <p> 
+            Documentation for the main a-mamal.com project. 
+        </p> 
+        
+        <h3> 
+            <a href="{{ route('documentation.a-mamal-dev') }}"> a-mamal.dev </a> 
+        </h3> 
+
+        <p> 
+            Documentation for the a-mamal.dev development space. 
+        </p> 
     </section>
-
-    <section class="docs-section">
-        <h2>a-mamal.dev</h2>
-
-        
-        <p>
-            Documentation for this experimental development space, including how
-            it is structured and how it evolves over time.
-        </p>
-        
-        <h3>Topics</h3>
-
-        <ul>
-            <li>Overview</li>
-            <li>Project structure</li>
-            <li>Development setup</li>
-            <li>Deployment</li>
-            <li>Contributing</li>
-        </ul>
-    </section>
-
+    
 </x-site-layout>
