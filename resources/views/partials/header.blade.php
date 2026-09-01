@@ -45,7 +45,7 @@
         </a>
 
         <a href="{{ route('documentation') }}">
-            <span class="nav-label">Docs</span>
+            <span class="nav-label">Documentation</span>
         </a>
 
     </nav>
