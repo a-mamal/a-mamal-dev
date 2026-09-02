@@ -196,6 +196,12 @@ h4 {
     margin-bottom: var(--space-xs);
 }
 
+p {
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-lg);
+    color: var(--color-text-primary);
+}
+
 /* ------------------ Main Header (Sidebar) ------------------ */
 
 .main-header{
@@ -436,7 +442,6 @@ section:hover {
 
 .page-header p {
     color: var(--color-white);
-    font-size: var(--font-size-md);
 }
 
 /* -------------------- Cards -------------------- */
@@ -585,14 +590,6 @@ section:hover {
     gap: var(--space-md);
 }
 
-.home-section p,
-.about-section p,
-.articles-section article p {
-    font-size: var(--font-size-md);
-    line-height: var(--line-height-lg);
-    color: var(--color-text-primary);
-}
-
 .about-section p.highlight {
     font-style: italic;
     color: var(--color-text-primary);
@@ -633,11 +630,6 @@ section:hover {
     flex-direction: column;
     gap: var(--space-md);
     line-height: var(--line-height-lg);
-}
-
-.article-content p {
-    font-size: var(--font-size-md);
-    color: var(--color-text-primary);
 }
 
 .article-content a {
