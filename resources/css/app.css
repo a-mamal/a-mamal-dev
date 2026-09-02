@@ -202,6 +202,16 @@ p {
     color: var(--color-text-primary);
 }
 
+a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 0.10em;
+}
+
+a:hover {
+    color: var(--color-secondary);
+}
+
 /* ------------------ Main Header (Sidebar) ------------------ */
 
 .main-header{
@@ -602,15 +612,6 @@ section:hover {
     color: var(--color-text-primary);
 }
 
-.about-section p.card-meta a,
-.about-section p.card-meta a:visited {
-    text-decoration: none;
-}
-
-.about-section p.card-meta a:hover {
-    text-decoration: underline;
-}
-
 .about-section ul {
     display: flex;
     flex-direction: column;
@@ -630,14 +631,6 @@ section:hover {
     flex-direction: column;
     gap: var(--space-md);
     line-height: var(--line-height-lg);
-}
-
-.article-content a {
-    color: var(--color-primary);
-}
-
-.article-content a:hover {
-    color: var(--color-secondary);
 }
 
 .article-content blockquote {
