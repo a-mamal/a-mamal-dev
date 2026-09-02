@@ -196,6 +196,22 @@ h4 {
     margin-bottom: var(--space-xs);
 }
 
+p {
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-lg);
+    color: var(--color-text-primary);
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 0.10em;
+}
+
+a:hover {
+    color: var(--color-secondary);
+}
+
 /* ------------------ Main Header (Sidebar) ------------------ */
 
 .main-header{
@@ -436,7 +452,6 @@ section:hover {
 
 .page-header p {
     color: var(--color-white);
-    font-size: var(--font-size-md);
 }
 
 /* -------------------- Cards -------------------- */
@@ -585,14 +600,6 @@ section:hover {
     gap: var(--space-md);
 }
 
-.home-section p,
-.about-section p,
-.articles-section article p {
-    font-size: var(--font-size-md);
-    line-height: var(--line-height-lg);
-    color: var(--color-text-primary);
-}
-
 .about-section p.highlight {
     font-style: italic;
     color: var(--color-text-primary);
@@ -603,15 +610,6 @@ section:hover {
 .about-section p.question {
     font-style: italic;
     color: var(--color-text-primary);
-}
-
-.about-section p.card-meta a,
-.about-section p.card-meta a:visited {
-    text-decoration: none;
-}
-
-.about-section p.card-meta a:hover {
-    text-decoration: underline;
 }
 
 .about-section ul {
@@ -633,19 +631,6 @@ section:hover {
     flex-direction: column;
     gap: var(--space-md);
     line-height: var(--line-height-lg);
-}
-
-.article-content p {
-    font-size: var(--font-size-md);
-    color: var(--color-text-primary);
-}
-
-.article-content a {
-    color: var(--color-primary);
-}
-
-.article-content a:hover {
-    color: var(--color-secondary);
 }
 
 .article-content blockquote {
