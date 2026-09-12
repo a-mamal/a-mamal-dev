@@ -3,6 +3,7 @@ title: "Designing a Multimedia Project History"
 slug: "designing-a-multimedia-project-history"
 excerpt: "Why a-mamal.dev's project history is being designed as a multimedia timeline."
 status: "published"
+published_at: 2026-09-12
 ---
 
 # Designing a Multimedia Project History
