@@ -612,7 +612,8 @@ section:hover {
     color: var(--color-text-primary);
 }
 
-.about-section ul {
+.about-section ul,
+.article-content ul {
     display: flex;
     flex-direction: column;
     padding-left: var(--space-sm);
