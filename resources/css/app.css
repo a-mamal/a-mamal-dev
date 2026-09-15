@@ -642,6 +642,46 @@ section:hover {
     font-style: italic;
 }
 
+/* ------------- Documentation - Project History ------------ */
+
+.project-history-timeline {
+    position: relative;
+}
+
+.project-history-entry {
+    position: relative;
+    padding-left: var(--space-lg);
+}
+
+.project-history-entry time {
+    display: block;
+    margin-bottom: var(--space-xs);
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.project-history-timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    background: var(--color-text-primary-70);
+}
+
+.project-history-entry::before {
+    content: "";
+    position: absolute;
+    top: 0.8rem;
+    left: -0.312rem;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background: var(--color-primary);
+}
+
 /* -------------------- Contact Page -------------------- */
 
 .contact-section {
