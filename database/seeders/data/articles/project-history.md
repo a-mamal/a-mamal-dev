@@ -6,8 +6,6 @@ status: published
 published_at: 2026-09-12
 ---
 
-# Designing a Multimedia Project History
-
 As a-mamal.dev continues to evolve, I wanted to document more than its current state. I also wanted to preserve the process behind it: the design changes, architectural decisions, experiments, and iterations that shaped the project over time.
 
 This led to the idea of a visual project history presented as a timeline.
@@ -72,6 +70,7 @@ This makes historical visuals easier to find and keeps media associated with the
 
 The structure can therefore be thought of as:
 
+```
 history-media/
 ├── a-mamal-com/
 │   └── ...
@@ -85,6 +84,7 @@ history-media/
     ├── home/
     ├── lab/
     └── projects/
+```
 
 The goal is not to create a complicated asset management system. The filesystem provides a simple and understandable way to organize the media while the project is still relatively small.
 
