@@ -4,10 +4,12 @@
  :headerTitle="'a-mamal.dev'"
  :subtitle="'Project documentation, development notes, and technical details.'">
 
-```
+
 @include('partials.documentation.a-mamal-dev.overview')
 
 @include('partials.documentation.a-mamal-dev.content-architecture')
-```
+
+@include('partials.documentation.a-mamal-dev.project-history')
+
 
 </x-site-layout>
