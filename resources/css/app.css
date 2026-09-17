@@ -643,43 +643,99 @@ section:hover {
 }
 
 /* ------------- Documentation - Project History ------------ */
-
+/* Timeline container */
 .project-history-timeline {
     position: relative;
 }
 
 .project-history-entry {
     position: relative;
-    padding-left: var(--space-lg);
 }
 
 .project-history-entry time {
     display: block;
-    margin-bottom: var(--space-xs);
+    width: fit-content;
+    margin: 0 auto var(--space-lg);
+    padding: 0.5rem var(--space-sm);
+    border: 2px solid var(--color-silver);
+    border-radius: 40px;
     font-size: var(--font-size-lg);
     font-weight: 600;
-    color: var(--color-primary);
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    position: relative;
+    z-index: 1;
 }
 
+.project-history-entry h3 {    
+    width: fit-content;
+    margin: 5rem auto;
+    padding: 0.2rem var(--space-sm);
+    border-bottom: 1px outset var(--color-seasalt);
+    border-radius: 30px;
+    background-color: var(--color-surface);
+    position: relative;
+    z-index: 3; /* Keep the title above the timeline */
+
+}
+
+/* Timeline line */
 .project-history-timeline::before {
     content: "";
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0;
-    width: 2px;
-    background: var(--color-text-primary-70);
+    left: 50%;
+    width: 0.15rem;
+    background: var(--color-primary);
+    transform: translateX(-50%); /* Center the line on the timeline */
+    z-index: 0;
 }
 
+/* Timeline dot */
 .project-history-entry::before {
     content: "";
     position: absolute;
-    top: 0.8rem;
-    left: -0.312rem;
+    top: 5rem;
+    left: 50%;
     width: 0.75rem;
     height: 0.75rem;
     border-radius: 50%;
-    background: var(--color-primary);
+    background: var(--color-secondary);
+    transform: translateX(-50%); /* Center the dot on the timeline */
+    z-index: 2;
+}
+
+.project-history-entry-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    margin-top: 7rem;
+}
+
+.project-history-entry-text {
+    text-align: right;
+    padding: 0 5rem 3rem;
+}
+
+/* Media groups are semantic sections, but should not look like cards */
+.project-history-media-group {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0 5rem 3rem;
+    border: 0;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+    gap: var(--space-sm);
+    transition: none;
+}
+
+.project-history-media-group:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: transparent;
 }
 
 .project-history-media-toggle {
