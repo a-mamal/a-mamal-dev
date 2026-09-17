@@ -4,11 +4,12 @@
     <div class="project-history-timeline">
         <article class="project-history-entry">
             <time datetime="2026-09-15">September 15, 2026</time>
-
+            <h3>Early a-mamal.dev structure</h3>
+            
             <div class="project-history-entry-content">
 
                 <div class="project-history-entry-text">
-                    <h3>Early a-mamal.dev structure</h3>
+                    
 
                     <p>
                         The project began taking shape across its main sections, including
