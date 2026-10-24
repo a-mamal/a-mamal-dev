@@ -39,9 +39,14 @@ The frontend will communicate with the backend through HTTP requests to its API.
 
 Before running the project locally, ensure you have the following installed:
 
+### Backend
 - PHP and Composer
-- Node.js and npm
 - MariaDB
+
+### Frontend
+- Node.js and npm
+
+### General
 - Git
 
 ## Local Development Setup
