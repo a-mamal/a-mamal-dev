@@ -7,7 +7,7 @@ A learning-in-public project exploring Laravel, React, TypeScript, and API devel
 - [Tech Stack](#tech-stack)
 - [Architecture](#architecture)
 - [Prerequisites](#prerequisites)
-- [Local Development](#local-development)
+- [Local Development Setup](#local-development-setup)
   - [Backend](#backend)
   - [Frontend](#frontend)
 - [Project Status](#project-status)
@@ -44,6 +44,68 @@ Before running the project locally, ensure you have the following installed:
 - MariaDB
 - Git
 
-## Development
+## Local Development Setup
 
-Development and deployment instructions will be added as the project evolves.
+### Backend
+
+1. Navigate to the backend directory:
+
+   ```bash
+   cd backend
+   ```
+
+2. Install the dependencies:
+
+   ```bash
+   composer install
+   ```
+
+3. Copy the example environment file:
+
+   ```powershell
+   Copy-Item .env.example .env
+   ```
+
+4. Generate the application key:
+
+   ```bash
+   php artisan key:generate
+   ```
+
+5. Create a MariaDB database for the project and configure its connection details in `.env`.
+
+6. Run the database migrations:
+
+   ```bash
+   php artisan migrate
+   ```
+
+7. Start the Laravel development server:
+
+   ```bash
+   php artisan serve
+   ```
+
+The backend will be available at `http://127.0.0.1:8000`.
+
+### Frontend
+
+1. Navigate to the frontend directory:
+
+   ```bash
+   cd frontend
+   ```
+
+2. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the Vite development server:
+
+   ```bash
+   npm run dev
+   ```
+
+The frontend will be available at the URL displayed in the terminal, typically `http://localhost:5173`.
