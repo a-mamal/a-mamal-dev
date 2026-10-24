@@ -13,6 +13,20 @@ A learning-in-public project exploring Laravel, React, TypeScript, and API devel
 - [Project Status](#project-status)
 - [License](#license)
 
+
+## Tech Stack
+
+### Backend
+- PHP
+- Laravel
+- MariaDB
+- Laravel Sanctum
+
+### Frontend
+- React
+- TypeScript
+- Vite
+
 ## Architecture
 
 - `backend/` — Laravel backend and JSON API.
