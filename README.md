@@ -114,3 +114,13 @@ The backend will be available at `http://127.0.0.1:8000`.
    ```
 
 The frontend will be available at the URL displayed in the terminal, typically `http://localhost:5173`.
+
+## Project Status
+
+The project is currently in its initial development stage.
+
+- [x] Set up the Laravel backend.
+- [x] Configure MariaDB for local development.
+- [x] Set up the React and TypeScript frontend with Vite.
+- [ ] Implement API endpoints and connect the frontend to the backend.
+- [ ] Prepare the applications for deployment.
