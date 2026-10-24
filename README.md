@@ -35,6 +35,15 @@ The project uses a monorepo structure containing two independent applications:
 
 The frontend will communicate with the backend through HTTP requests to its API.
 
+## Prerequisites
+
+Before running the project locally, ensure you have the following installed:
+
+- PHP and Composer
+- Node.js and npm
+- MariaDB
+- Git
+
 ## Development
 
 Development and deployment instructions will be added as the project evolves.
