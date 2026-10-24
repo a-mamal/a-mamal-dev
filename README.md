@@ -13,7 +13,6 @@ A learning-in-public project exploring Laravel, React, TypeScript, and API devel
 - [Project Status](#project-status)
 - [License](#license)
 
-
 ## Tech Stack
 
 ### Backend
@@ -29,8 +28,12 @@ A learning-in-public project exploring Laravel, React, TypeScript, and API devel
 
 ## Architecture
 
-- `backend/` — Laravel backend and JSON API.
-- `frontend/` — React and TypeScript frontend built with Vite.
+The project uses a monorepo structure containing two independent applications:
+
+- `backend/` — Laravel application responsible for server-side logic, database operations, and API endpoints.
+- `frontend/` — React and TypeScript application built with Vite.
+
+The frontend will communicate with the backend through HTTP requests to its API.
 
 ## Development
 
