@@ -2,6 +2,17 @@
 
 A learning-in-public project exploring Laravel, React, TypeScript, and API development.
 
+## Table of Contents
+
+- [Tech Stack](#tech-stack)
+- [Architecture](#architecture)
+- [Prerequisites](#prerequisites)
+- [Local Development](#local-development)
+  - [Backend](#backend)
+  - [Frontend](#frontend)
+- [Project Status](#project-status)
+- [License](#license)
+
 ## Architecture
 
 - `backend/` — Laravel backend and JSON API.
