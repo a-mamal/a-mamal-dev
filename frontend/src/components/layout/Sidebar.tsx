@@ -1,3 +1,5 @@
+import { House, FolderCode, UserRound } from "lucide-react"
+
 function Sidebar() {
 	return (
 		<div className="sidebar">
@@ -6,9 +8,20 @@ function Sidebar() {
 			</header>
 
 			<nav aria-label="Main navigation">
-				<a href="/">Home</a>
-				<a href="/projects">Projects</a>
-				<a href="/about">About</a>
+				<a href="/">
+					<House aria-hidden="true" />
+					<span>Home</span>
+				</a>
+
+				<a href="/projects">
+					<FolderCode aria-hidden="true" />
+					<span>Projects</span>
+				</a>
+
+				<a href="/about">
+					<UserRound aria-hidden="true" />
+					<span>About</span>
+				</a>
 			</nav>
 		</div>
 	)

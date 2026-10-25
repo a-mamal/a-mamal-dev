@@ -57,8 +57,9 @@
 
     a{
       display: flex;
-      padding: var(--space-xs) var(--space-md);
+      padding: var(--space-xs);
       align-items: center;
+      gap: var(--space-xs);
       font-size: var(--font-size-lg);
       color: inherit;
       text-decoration: none;
@@ -68,6 +69,12 @@
       &:hover {
         color: var(--color-onyx);
         transform: translateX(2px);
+      }
+
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        flex-shrink: 0;
       }
     }
 
