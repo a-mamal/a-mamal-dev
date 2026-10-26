@@ -48,4 +48,4 @@ jobs:
           port: 21
           local-dir: frontend/dist/
           server-dir: ./
-          dry-run: true
+          dry-run: false
