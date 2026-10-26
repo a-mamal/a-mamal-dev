@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import Sidebar from '../components/layout/Sidebar'
+import SherlockStatusReport from '../components/layout/SherlockStatusReport'
 
 type AppLayoutProps = {
 	children: ReactNode
@@ -13,6 +14,8 @@ function AppLayout({ children }: AppLayoutProps) {
 			<main className="main-content">
 				{children}
 			</main>
+			
+			<SherlockStatusReport />
 		</div>
 	)
 }
