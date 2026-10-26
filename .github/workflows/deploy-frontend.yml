@@ -1,0 +1,51 @@
+name: Deploy a-mamal.dev Frontend
+
+# Run when frontend files or this workflow change.
+on:
+  push:
+    branches:
+      - main
+      - feat/frontend-deployment
+    paths:
+      - "frontend/**"
+      - ".github/workflows/deploy-frontend.yml"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Pull the repository code from GitHub.
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      # Set up Node.js for the React + TypeScript frontend.
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      # Install dependencies from the lockfile.
+      - name: Install frontend dependencies
+        working-directory: frontend
+        run: npm ci
+
+      # Type-check TypeScript and build the production assets.
+      - name: Build frontend
+        working-directory: frontend
+        run: npm run build
+
+      # Upload the production build to Hostinger.
+      - name: Deploy frontend to Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.HOSTINGER_HOST }}
+          username: ${{ secrets.HOSTINGER_USER }}
+          password: ${{ secrets.HOSTINGER_PASS }}
+          protocol: ftp
+          port: 21
+          local-dir: frontend/dist/
+          server-dir: ./
+          dry-run: false
