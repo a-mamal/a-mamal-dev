@@ -1,10 +1,11 @@
 name: Deploy a-mamal.dev Frontend
 
-# Run when frontend files or this workflow change on main.
+# Run when frontend files or this workflow change.
 on:
   push:
     branches:
       - main
+      - feat/frontend-deployment
     paths:
       - "frontend/**"
       - ".github/workflows/deploy-frontend.yml"
