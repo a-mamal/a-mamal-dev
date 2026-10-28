@@ -36,4 +36,10 @@ class User extends Authenticatable
 	{
 		return $this->hasMany(Pet::class);
 	}
+
+	// Get the projects owned by this user.
+	public function projects(): HasMany
+	{
+		return $this->hasMany(Project::class);
+	}
 }
