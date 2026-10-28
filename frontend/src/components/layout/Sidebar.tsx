@@ -1,11 +1,12 @@
-import { useState } from "react"
+import { useState } from 'react'
+import { NavLink } from 'react-router'
 import { 
 	House, 
 	FolderCode, 
 	UserRound,
 	PanelLeftClose,
 	PanelLeftOpen,
-} from "lucide-react"
+} from 'lucide-react'
 
 function Sidebar() {
 	const [isCollapsed, setIsCollapsed] = useState(false)
@@ -17,7 +18,7 @@ function Sidebar() {
 	return (
 		<div className={`sidebar ${isCollapsed ? 'sidebar--collapsed' : ''}`}>
 			<header className="sidebar-header">
-				<a href="/">a-mamal.dev</a>
+				<NavLink to="/">a-mamal.dev</NavLink>
 			</header>
 
 			<button
@@ -40,20 +41,20 @@ function Sidebar() {
 			</button>
 
 			<nav aria-label="Main navigation">
-				<a href="/">
+				<NavLink to="/" end>
 					<House aria-hidden="true" />
 					<span>Home</span>
-				</a>
+				</NavLink>
 
-				<a href="/projects">
+				<NavLink to="/projects">
 					<FolderCode aria-hidden="true" />
 					<span>Projects</span>
-				</a>
+				</NavLink>
 
-				<a href="/about">
+				<NavLink to="/about">
 					<UserRound aria-hidden="true" />
 					<span>About</span>
-				</a>
+				</NavLink>
 			</nav>
 		</div>
 	)
