@@ -3,6 +3,8 @@ import { NavLink } from 'react-router'
 import { 
 	House, 
 	FolderCode, 
+	NotebookPen,
+	BookOpenText,
 	UserRound,
 	PanelLeftClose,
 	PanelLeftOpen,
@@ -49,6 +51,16 @@ function Sidebar() {
 				<NavLink to="/projects">
 					<FolderCode aria-hidden="true" />
 					<span>Projects</span>
+				</NavLink>
+
+				<NavLink to="/logbook">
+					<NotebookPen aria-hidden="true" />
+					<span>Logbook</span>
+				</NavLink>
+
+				<NavLink to="/documentation">
+					<BookOpenText aria-hidden="true" />
+					<span>Documentation</span>
 				</NavLink>
 
 				<NavLink to="/about">
