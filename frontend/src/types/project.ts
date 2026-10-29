@@ -7,3 +7,7 @@ export interface Project {
 	github_url: string | null
 	status: 'planned' | 'in_progress' | 'completed' | 'archived'
 }
+
+export interface ProjectsApiResponse {
+    data: Project[]
+}

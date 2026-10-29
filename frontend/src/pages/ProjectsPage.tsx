@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import type { Project } from '../types/project'
+import type { Project, ProjectsApiResponse } from '../types/project'
 
 function ProjectsPage() {
 
@@ -16,7 +16,7 @@ function ProjectsPage() {
 					throw new Error('Failed to fetch projects.')
 				}
 
-				const result = await response.json()
+				const result: ProjectsApiResponse = await response.json()
 
 				setProjects(result.data)
 
