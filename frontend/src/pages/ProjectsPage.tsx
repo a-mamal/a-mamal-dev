@@ -1,6 +1,14 @@
 import { useEffect, useState } from 'react'
 import type { Project, ProjectsApiResponse } from '../types/project'
 
+// Convert API status values into presentable labels.
+function formatStatus(status: Project['status']): string {
+	return status
+		.split('_')
+		.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+		.join(' ')
+}
+
 function ProjectsPage() {
 
 	const [projects, setProjects] = useState<Project[]>([])
@@ -48,7 +56,7 @@ function ProjectsPage() {
 					<article key={project.id}>
 						<h2>{project.name}</h2>
 						<p>{project.description}</p>
-						<p>Status: {project.status}</p>
+						<p>Status: {formatStatus(project.status)}</p>
 					</article>
 				))
 			)}
