@@ -1,0 +1,77 @@
+name: Deploy a-mamal.dev Backend
+
+# Deploy when backend code or this workflow changes on main.
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "backend/**"
+      - ".github/workflows/deploy-backend.yml"
+    
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Pull the repository code from GitHub.
+      - uses: actions/checkout@v7
+
+      # Upload the Laravel application to Hostinger.
+      - name: Deploy Laravel application
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.HOSTINGER_HOST }}
+          username: ${{ secrets.HOSTINGER_USER }}
+          password: ${{ secrets.HOSTINGER_PASS }}
+          protocol: ftp
+          port: 21
+          local-dir: backend/
+          server-dir: ../
+          exclude: |
+            **/.env 
+            **/.env.* 
+            !**/.env.example 
+            **/vendor/** 
+            **/node_modules/** 
+            **/.git/** 
+            **/.github/** 
+            **/tests/** 
+            **/storage/logs/** 
+            **/storage/framework/cache/** 
+            **/storage/framework/sessions/** 
+            **/storage/framework/views/** 
+            **/storage/app/private/**
+
+      # Install production dependencies and optimize Laravel.
+      - name: Install Composer dependencies on server
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.HOSTINGER_SSH_HOST }}
+          username: ${{ secrets.HOSTINGER_SSH_USER }}
+          password: ${{ secrets.HOSTINGER_SSH_PASSWORD }}
+          port: ${{ secrets.HOSTINGER_SSH_PORT }}
+          script: |
+            set -e
+            cd ~/domains/api.a-mamal.dev
+
+            composer2 install --no-dev --optimize-autoloader --no-interaction
+
+            php artisan optimize:clear
+            php artisan optimize
+
+      # Point Hostinger's document root to Laravel's public directory.
+      - name: Configure public_html symlink
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.HOSTINGER_SSH_HOST }}
+          username: ${{ secrets.HOSTINGER_SSH_USER }}
+          password: ${{ secrets.HOSTINGER_SSH_PASSWORD }}
+          port: ${{ secrets.HOSTINGER_SSH_PORT }}
+          script: |
+            set -e
+            cd ~/domains/api.a-mamal.dev
+
+            rm -rf ./public_html
+            ln -s ./public public_html
