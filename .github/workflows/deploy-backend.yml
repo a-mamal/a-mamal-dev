@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - main
+      - fix/deployment-storage-directories
     paths:
       - "backend/**"
       - ".github/workflows/deploy-backend.yml"
@@ -40,7 +41,6 @@ jobs:
             **/storage/logs/** 
             **/storage/framework/cache/** 
             **/storage/framework/sessions/** 
-            **/storage/framework/views/** 
             **/storage/app/private/**
 
       # Install production dependencies and optimize Laravel.
