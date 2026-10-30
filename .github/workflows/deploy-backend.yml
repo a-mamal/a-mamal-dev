@@ -9,7 +9,6 @@ on:
       - "backend/**"
       - ".github/workflows/deploy-backend.yml"
     
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -22,9 +21,9 @@ jobs:
       - name: Deploy Laravel application
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
-          server: ${{ secrets.HOSTINGER_HOST }}
-          username: ${{ secrets.HOSTINGER_USER }}
-          password: ${{ secrets.HOSTINGER_PASS }}
+          server: ${{ secrets.HOSTINGER_API_FTP_HOST }}
+          username: ${{ secrets.HOSTINGER_API_FTP_USER }}
+          password: ${{ secrets.HOSTINGER_API_FTP_PASS }}
           protocol: ftp
           port: 21
           local-dir: backend/
