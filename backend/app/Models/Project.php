@@ -28,7 +28,7 @@ class Project extends Model
         return $this->belongsTo(User::class);
     }
 
-    public public function documentationPages(): HasMany
+    public function documentationPages(): HasMany
     {
         return $this->hasMany(DocumentationPage::class)->orderBy('sort_order');
     }
