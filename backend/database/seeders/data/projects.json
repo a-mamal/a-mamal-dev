@@ -1,0 +1,26 @@
+[
+	{
+		"name": "a-mamal.dev",
+		"slug": "a-mamal-dev",
+		"description": "A personal development website built with React and Laravel, documenting experiments, projects, technical decisions and lessons learned while developing in public.",
+		"status": "in_progress",
+		"project_url": "https://a-mamal.dev",
+		"github_url": "https://github.com/a-mamal/a-mamal-dev"
+	},
+	{
+		"name": "initial.a-mamal.dev",
+		"slug": "a-mamal-dev-initial",
+		"description": "The initial version of a-mamal.dev, built with Laravel, Blade and Eloquent.",
+		"status": "archived",
+		"project_url": "https://initial.a-mamal.dev",
+		"github_url": "https://github.com/a-mamal/a-mamal-dev-initial"
+	},
+	{
+		"name": "a-mamal.com",
+		"slug": "a-mamal-com",
+		"description": "A professional developer portfolio built with Laravel, Blade and Eloquent, showcasing projects, skills and professional experience.",
+		"status": "in_progress",
+		"project_url": "https://a-mamal.com",
+		"github_url": "https://github.com/a-mamal/a-mamal-com"
+	}
+]
