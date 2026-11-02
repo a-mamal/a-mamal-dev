@@ -17,18 +17,7 @@ class ProjectSeeder extends Seeder
 	 */
 	public function run(): void
 	{
-		$mainUser = $this->getMainUser();
-
-		// Use fictional data locally and actual project data in production.
-		if (app()->environment('local')) {
-			$this->seedDevelopmentProjects($mainUser);
-		} elseif (app()->environment('production')) {
-			$this->seedProductionProjects($mainUser);
-		} else {
-			throw new RuntimeException(
-				'Project seeding is not configured for this environment.'
-			);
-		}
+		$this->seedProjects($this->getMainUser());
 	}
 
 	/**
@@ -43,26 +32,15 @@ class ProjectSeeder extends Seeder
 	}
 
 	/**
-	 * Generate fictional projects for local development.
+	 * Load and store the projects from the JSON data file.
 	 */
-	private function seedDevelopmentProjects(User $user): void
+	private function seedProjects(User $user): void
 	{
-		Project::factory()
-			->count(5)
-			->for($user)
-			->create();
-	}
+		$jsonPath = database_path('seeders/data/projects.json');
 
-	/**
-	 * Load and store the actual projects.
-	 */
-	private function seedProductionProjects(User $user): void
-	{
-		$jsonPath = database_path('seeders/production-data/projects.json');
-
-		// Ensure the production data file exists before attempting to read it.
+		// Ensure the data file exists before attempting to read it.
 		if (!File::isFile($jsonPath)) {
-			throw new RuntimeException('Production project data file not found.');
+			throw new RuntimeException('Project data file not found.');
 		}
 
 		// Decode the JSON file into an associative PHP array.
@@ -76,7 +54,7 @@ class ProjectSeeder extends Seeder
 
 		// Ensure the decoded data is a sequential list of projects.
 		if (! is_array($projects) || ! array_is_list($projects)) {
-			throw new RuntimeException('Production project data must be a JSON array.');
+			throw new RuntimeException('Project data must be a JSON array.');
 		}
 
 		DB::transaction(function () use ($projects, $user): void {
@@ -84,7 +62,7 @@ class ProjectSeeder extends Seeder
 				// Ensure each list entry represents a project object.
 				if (! is_array($project)) {
 					throw new RuntimeException(
-						'Each production project must be a JSON object.'
+						'Each project must be a JSON object.'
 					);
 				}
 
@@ -96,7 +74,7 @@ class ProjectSeeder extends Seeder
 						Str::trim($project[$field]) === ''
 					) {
 						throw new RuntimeException(
-							"Production project data is missing the required '{$field}' value."
+							"Project data is missing the required '{$field}' value."
 						);
 					}
 				}
