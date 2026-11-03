@@ -12,20 +12,20 @@ a-mamal.dev is one repository that holds two applications. They talk to each oth
 
 ## How content gets to the page
 
-1. **Content lives in the repository.** 
-Projects are described in `projects.json`, and documentation pages are markdown files in `backend/database/seeders/data/documentation/{project-slug}/{page-slug}.md`.
+1. **Content lives in the repository.**
+    Projects are described in `projects.json`, and documentation pages are markdown files in `backend/database/seeders/data/documentation/{project-slug}/{page-slug}.md`.
 
-2. **Seeders load it into the database.** 
-    - `ProjectSeeder` fills the `projects` table, and 
-    - `DocumentationPageSeeder` fills the `documentation_pages` table. 
+2. **Seeders load it into the database.**
+    - `ProjectSeeder` fills the `projects` table, and
+    - `DocumentationPageSeeder` fills the `documentation_pages` table.
 
-Both match records by slug, so running them again updates existing entries instead of duplicating them.
+    Both match records by slug, so running them again updates existing entries instead of duplicating them.
 
-3. **The API serves it as JSON.** 
-The projects endpoint is working already. The documentation endpoints are next.
+3. **The API serves it as JSON.**
+    The projects endpoint is working already.
 
-4. **The frontend fetches and displays it.** 
-Documentation pages are stored as markdown, so the frontend turns them into HTML when it shows them.
+4. **The frontend fetches and displays it.**
+    Documentation pages are stored as markdown, so the frontend turns them into HTML when it shows them.
 
 ## Why it works this way
 
@@ -37,4 +37,4 @@ Documentation pages are stored as markdown, so the frontend turns them into HTML
 
 - `backend/`: the Laravel API.
 - `backend/database/seeders/data/`: the content the seeders read (`projects.json` and the `documentation/` folder).
-- `frontend/`: the React app
+- `frontend/`: the React app.
