@@ -25,7 +25,6 @@ a-mamal.dev is one repository that holds two applications. They talk to each oth
     The projects endpoint is working already.
 
 4. **The frontend fetches and displays it.**
-    Documentation pages are stored as markdown, so the frontend turns them into HTML when it shows them.
 
 ## Why it works this way
 
@@ -36,5 +35,5 @@ a-mamal.dev is one repository that holds two applications. They talk to each oth
 ## Where things live
 
 - `backend/`: the Laravel API.
-- `backend/database/seeders/data/`: the content the seeders read (`projects.json` and the `documentation/` folder).
+- `backend/database/seeders/data/`: the content the seeders read.
 - `frontend/`: the React app.
