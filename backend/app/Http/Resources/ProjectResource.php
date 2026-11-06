@@ -22,6 +22,7 @@ class ProjectResource extends JsonResource
 			'project_url' => $this->project_url,
 			'github_url' => $this->github_url,
 			'status' => $this->status,
+			'has_documentation' => (bool) $this->documentation_pages_exists,
 		];
 	}
 }
