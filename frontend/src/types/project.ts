@@ -6,6 +6,7 @@ export interface Project {
 	project_url: string | null
 	github_url: string | null
 	status: 'planned' | 'in_progress' | 'completed' | 'archived'
+	has_documentation: boolean
 }
 
 export interface ProjectsApiResponse {
