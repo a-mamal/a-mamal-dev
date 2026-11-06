@@ -23,6 +23,10 @@ function App() {
 						path="/documentation/:projectSlug"
 						element={<DocumentationProjectPage />}
 					/>
+					<Route
+						path="/documentation/:projectSlug/:pageSlug"
+						element={<DocumentationProjectPage />}
+					/>
 					<Route path="/logbook" element={<LogbookPage />} />
 					<Route path="/projects" element={<ProjectsPage />} />
 				</Route>
