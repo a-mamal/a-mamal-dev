@@ -22,7 +22,7 @@ a-mamal.dev is one repository that holds two applications. They talk to each oth
     Both match records by slug, so running them again updates existing entries instead of duplicating them.
 
 3. **The API serves it as JSON.**
-    The projects endpoint is working already.
+    The API has endpoints for projects and for documentation pages.
 
 4. **The frontend fetches and displays it.**
 
