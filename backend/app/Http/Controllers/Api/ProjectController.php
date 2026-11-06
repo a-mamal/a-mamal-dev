@@ -12,7 +12,9 @@ class ProjectController extends Controller
 	public function index()
 	{
 		return ProjectResource::collection(
-			Project::query()->get()
+			Project::query()
+			->withExists('documentationPages')
+			->get()
 		);
 	}
 }
