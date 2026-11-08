@@ -113,8 +113,8 @@ function ProjectDocumentation({
 	}
 
 	return (
-		<section>
-			<nav aria-label="Project documentation">
+		<section className="project-documentation">
+			<nav aria-label="Project documentation navigation">
 				<ul>
 					{pages.map((page) => (
 						<li key={page.id}>

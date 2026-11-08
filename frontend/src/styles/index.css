@@ -27,8 +27,8 @@
 	--color-primary: var(--color-steel-blue);
 	--color-secondary: var(--color-folly);
 	--color-accent: var(--color-selective-yellow);
-	--color-border: var(--color-silver);	
-	
+	--color-border: var(--color-silver);
+
 	--color-text-primary: var(--color-smokey-black);
 	--color-text-muted: var(--color-onyx);
 
@@ -132,22 +132,73 @@ p {
 	line-height: var(--line-height-lg);
 }
 
+
 /*
 ==================================================
-	Links and interactive elements
+    General HTML Elements
 ==================================================
 */
 
-a {
-	color: var(--color-primary);
-	text-underline-offset: 0.15em;
+/* Lists */
+ul,
+ol {
+	padding-left: var(--space-lg);
 }
 
-a:hover {
-	color: var(--color-secondary);
+li {
+	line-height: var(--line-height-lg);
 }
 
-a:focus-visible {
-	outline: 2px solid var(--color-primary);
-	outline-offset: 3px;
+/* Blockquotes */
+blockquote {
+	margin: var(--space-md) 0;
+	padding: var(--space-sm) var(--space-md);
+
+	border-left: 3px solid var(--color-primary);
+	background-color: var(--color-surface);
+	color: var(--color-text-muted);
+}
+
+/* Code */
+code,
+pre {
+	font-family: var(--font-mono);
+}
+
+code {
+	font-size: var(--font-size-sm);
+}
+
+pre {
+	overflow-x: auto;
+	padding: var(--space-md);
+
+	border: 1px solid var(--color-border);
+	border-radius: 0.25rem;
+
+	background-color: var(--color-surface);
+}
+
+pre code {
+	font-size: inherit;
+}
+
+/* Tables */
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th,
+td {
+	padding: var(--space-xs) var(--space-sm);
+	border: 1px solid var(--color-border);
+	text-align: left;
+}
+
+/* Horizontal rules */
+hr {
+	margin: var(--space-lg) 0;
+	border: 0;
+	border-top: 1px solid var(--color-border);
 }

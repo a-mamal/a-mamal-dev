@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router'
+import { ChevronRight } from 'lucide-react'
 import type { Project, ProjectsApiResponse } from '../types/project'
 
 function DocumentationPage() {
@@ -45,26 +46,41 @@ function DocumentationPage() {
 	}
 
 	return (
-		<section>
-			<h1>Documentation</h1>
-			<p>
-				Explore project documentation, technical notes, and development guides.
-			</p>
+		<section className="documentation">
+			<header className="documentation__header">
+				<h1>Documentation</h1>
+				<p>
+					Explore project documentation, technical notes, and development guides.
+				</p>
+			</header>
 
 			{documentedProjects.length === 0 ? (
-				<p>No projects with documentation are available yet.</p>
+				<p>
+					No projects with documentation are available yet.{' '}<Link to="/projects">Explore projects</Link>.
+				</p>
 			) : (
-				<nav aria-label="Projects with documentation">
-					<ul>
+					<ul 
+						className="documentation__project-list"
+						aria-label="Projects with documentation"
+					>
 						{documentedProjects.map((project) => (
-							<li key={project.id}>
-								<Link to={`/documentation/${project.slug}`}>
-									{project.name}
+							<li 
+								key={project.id}
+							>
+								<Link 
+									to={`/documentation/${project.slug}`}
+									className="documentation__project-link"
+								>
+									<div className="documentation__project-info">
+										<h2>{project.name}</h2>
+										<p>{project.description}</p>
+									</div>
+
+									<ChevronRight aria-hidden="true" />
 								</Link>
 							</li>
 						))}
 					</ul>
-				</nav>
 			)}
 		</section>
 	)
