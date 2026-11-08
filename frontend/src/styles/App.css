@@ -421,3 +421,88 @@
 		color: var(--color-text-muted);
 	}
 }
+
+/*
+==================================================
+	Project Documentation
+==================================================
+*/
+
+/* Documentation layout */
+.project-documentation {
+	display: grid;
+	grid-template-columns: 14rem minmax(0, 1fr);
+	gap: var(--space-xl);
+	align-items: start;
+}
+
+/* Documentation navigation */
+.project-documentation > nav {
+	border-right: 1px solid var(--color-border);
+	padding-right: var(--space-md);
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	li + li {
+		margin-top: var(--space-xs);
+	}
+
+	a {
+		display: block;
+		padding: var(--space-xs) var(--space-sm);
+
+		color: var(--color-text-secondary);
+		text-decoration: none;
+		border-left: 3px solid transparent;
+
+		&:hover {
+			color: var(--color-text-primary);
+			background-color: var(--color-surface);
+		}
+
+		&[aria-current="page"] {
+			color: var(--color-primary);
+			background-color: var(--color-surface);
+			border-left-color: var(--color-primary);
+			font-weight: 600;
+		}
+	}
+}
+
+/* Documentation article */
+.project-documentation > article {
+	min-width: 0;
+	max-width: 80ch;
+
+	header {
+		margin-bottom: var(--space-xl);
+	}
+}
+
+@media (max-width: 768px) {
+	.project-documentation {
+		grid-template-columns: 1fr;
+		gap: var(--space-lg);
+	}
+
+	.project-documentation > nav {
+		border-right: none;
+		border-bottom: 1px solid var(--color-border);
+		padding-right: 0;
+		padding-bottom: var(--space-md);
+
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			gap: var(--space-xs);
+		}
+
+		li + li {
+			margin-top: 0;
+		}
+	}
+}
