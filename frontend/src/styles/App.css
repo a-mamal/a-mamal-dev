@@ -343,3 +343,81 @@
 		}
 	}
 }
+
+/*
+==================================================
+	Documentation
+==================================================
+*/
+
+/* Documentation header */
+.documentation__header {
+	margin-bottom: var(--space-xl);
+
+	p {
+		margin-top: var(--space-xs);
+		color: var(--color-text-muted);
+	}
+
+}
+
+/* Documentation project list */
+.documentation__project-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border-top: 1px solid var(--color-border);
+
+	li {
+		border-bottom: 1px solid var(--color-border);
+	}
+}
+
+/* Individual project link */
+.documentation__project-link {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--space-md);
+
+	padding: var(--space-md) var(--space-sm);
+
+	color: var(--color-text-primary);
+	text-decoration: none;
+
+	transition: background-color 150ms ease;
+
+	&:hover {
+		background-color: var(--color-surface);
+
+		svg {
+			transform: translateX(2px);
+		}
+	}
+	
+	&:focus-visible {
+			outline: 2px solid var(--color-primary);
+		outline-offset: -2px;
+	}
+
+	svg {
+		flex-shrink: 0;
+		transition: transform 150ms ease;
+	}
+}
+
+/* Project information */
+
+.documentation__project-info {
+	padding-right: var(--space-md);
+
+	h2 {
+		font-size: var(--font-size-lg);
+		line-height: var(--line-height-md);
+	}
+
+	p {
+		margin-top: var(--space-xs);
+		color: var(--color-text-muted);
+	}
+}
