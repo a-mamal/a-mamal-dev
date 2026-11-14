@@ -18,10 +18,12 @@ class ProjectResource extends JsonResource
 			'id' => $this->id,
 			'name' => $this->name,
 			'slug' => $this->slug,
+			'highlights' => $this->highlights,
 			'description' => $this->description,
 			'project_url' => $this->project_url,
 			'github_url' => $this->github_url,
 			'status' => $this->status,
+			'is_featured' => $this->is_featured,
 			'has_documentation' => (bool) $this->documentation_pages_exists,
 		];
 	}
