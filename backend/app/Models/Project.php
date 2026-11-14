@@ -16,11 +16,24 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
     'project_url',
     'github_url',
     'status',
+    'highlights',
+    'is_featured',
 ])]
 class Project extends Model
 {
     /** @use HasFactory<\Database\Factories\ProjectFactory> */
     use HasFactory;
+
+    /**
+     * Get the attributes that should be cast.
+     */
+    protected function casts(): array
+    {
+        return [
+            'highlights' => 'array',
+            'is_featured' => 'boolean',
+        ];
+    }
 
     // Get the user who owns this project.
     public function user(): BelongsTo
