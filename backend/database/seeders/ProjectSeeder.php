@@ -100,6 +100,37 @@ class ProjectSeeder extends Seeder
 					);
 				}
 
+				// Validate optional project highlights when provided.
+				$highlights = $project['highlights'] ?? null;
+
+				if ($highlights !== null) {
+					if (! is_array($highlights) || ! array_is_list($highlights)) {
+						throw new RuntimeException(
+							"Invalid highlights provided for project '{$project['name']}'."
+						);
+					}
+
+					foreach ($highlights as $highlight) {
+						if (
+							! is_string($highlight) ||
+							Str::trim($highlight) === ''
+						) {
+							throw new RuntimeException(
+								"Invalid highlight provided for project '{$project['name']}'."
+							);
+						}
+					}
+				}
+
+				// Validate the optional featured status.
+				$is_featured = $project['is_featured'] ?? false;
+
+				if (! is_bool($is_featured)) {
+					throw new RuntimeException(
+						"Invalid featured status for project '{$project['name']}'."
+					);
+				}
+
 				// Validate optional project URLs when provided.
 				$urls = [];
 
@@ -135,6 +166,8 @@ class ProjectSeeder extends Seeder
 						'project_url' => $urls['project_url'],
 						'github_url' => $urls['github_url'],
 						'status' => $project['status'],
+						'highlights' => $highlights,
+						'is_featured' => $is_featured,
 					]
 				);
 			}
