@@ -8,6 +8,16 @@ function formatStatus(status: Project['status']): string {
 		.join(' ')
 }
 
+function truncateDescription(description: string, maxWords = 25): string {
+	const words = description.split(/\s+/)
+
+	if (words.length <= maxWords) {
+		return description
+	}
+
+	return `${words.slice(0, maxWords).join(' ')}…`
+}
+
 interface ProjectCardProps {
 	project: Project
 }
@@ -29,7 +39,7 @@ function ProjectCard({ project }: ProjectCardProps) {
 				</ul>
 			)}
 
-			<p>{project.description}</p>
+			<p>{truncateDescription(project.description)}</p>
 		</article>
 	)
 }
