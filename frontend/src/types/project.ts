@@ -14,3 +14,7 @@ export interface Project {
 export interface ProjectsApiResponse {
     data: Project[]
 }
+
+export interface ProjectApiResponse {
+    data: Project
+}
