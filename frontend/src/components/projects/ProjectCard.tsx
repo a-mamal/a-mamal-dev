@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import type { Project } from '../../types/project'
 
 // Convert API status values into presentable labels.
@@ -40,6 +41,10 @@ function ProjectCard({ project }: ProjectCardProps) {
 			)}
 
 			<p>{truncateDescription(project.description)}</p>
+
+            <Link to={`/projects/${project.slug}`}>
+                View project
+            </Link>
 		</article>
 	)
 }
