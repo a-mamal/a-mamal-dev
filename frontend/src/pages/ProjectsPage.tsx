@@ -1,13 +1,6 @@
 import { useEffect, useState } from 'react'
 import type { Project, ProjectsApiResponse } from '../types/project'
-
-// Convert API status values into presentable labels.
-function formatStatus(status: Project['status']): string {
-	return status
-		.split('_')
-		.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-		.join(' ')
-}
+import ProjectCard from '../components/projects/ProjectCard'
 
 function ProjectsPage() {
 
@@ -41,11 +34,14 @@ function ProjectsPage() {
 	}, [])
 
 	return (
-		<section>
-			<h1>Projects</h1>
-			<p>Explore my projects, experiments, and development progress.</p>
+		<section className="projects">
+			<header className="projects__header">
+				<h1>Projects</h1>
+				<p>Explore my projects, experiments, and development progress.</p>
+			</header>
 
-			{isLoading && <p>Loading projects...</p>}
+
+			{isLoading && <p role="status">Loading projects...</p>}
 
 			{error && <p role="alert">{error}</p>}
 
@@ -54,13 +50,11 @@ function ProjectsPage() {
 			)}
 
 			{!isLoading && !error && projects.length > 0 && (
-				projects.map((project) => (
-					<article key={project.id}>
-						<h2>{project.name}</h2>
-						<p>{project.description}</p>
-						<p>Status: {formatStatus(project.status)}</p>
-					</article>
-				))
+				<div className="projects__grid">
+					{projects.map((project) => (
+						<ProjectCard key={project.id} project={project} />
+					))}
+				</div>
 			)}
 		</section>
 	)
