@@ -57,8 +57,20 @@ function ProjectsPage() {
 				projects.map((project) => (
 					<article key={project.id}>
 						<h2>{project.name}</h2>
-						<p>{project.description}</p>
+
 						<p>Status: {formatStatus(project.status)}</p>
+
+						{project.highlights && project.highlights.length > 0 && (
+							<ul>
+								{project.highlights.map((highlight, index) => (
+									<li key={`${project.id}-highlight-${index}`}>
+										{highlight}
+									</li>
+								))}
+							</ul>
+						)}
+
+						<p>{project.description}</p>
 					</article>
 				))
 			)}
