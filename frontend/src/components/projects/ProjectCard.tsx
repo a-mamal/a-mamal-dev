@@ -25,13 +25,19 @@ interface ProjectCardProps {
 
 function ProjectCard({ project }: ProjectCardProps) {
 	return (
-		<article>
-			<h2>{project.name}</h2>
-
-			<p>Status: {formatStatus(project.status)}</p>
+		<article className="project-card">
+            <header className="project-card__header">
+                <h2 className="project-card__name">
+                    {project.name}
+                </h2>
+                
+                <p className="project-card__status">
+                    Status: {formatStatus(project.status)}
+                </p> 
+            </header>
 
 			{project.highlights && project.highlights.length > 0 && (
-				<ul>
+				<ul className="project-card__highlights">
 					{project.highlights.map((highlight, index) => (
 						<li key={`${project.id}-highlight-${index}`}>
 							{highlight}
@@ -40,9 +46,14 @@ function ProjectCard({ project }: ProjectCardProps) {
 				</ul>
 			)}
 
-			<p>{truncateDescription(project.description)}</p>
+			<p className="project-card__description">
+                {truncateDescription(project.description)}
+            </p>
 
-            <Link to={`/projects/${project.slug}`}>
+            <Link 
+                className="project-card__link"
+                to={`/projects/${project.slug}`}
+            >
                 View project
             </Link>
 		</article>

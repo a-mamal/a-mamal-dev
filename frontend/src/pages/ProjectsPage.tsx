@@ -34,11 +34,14 @@ function ProjectsPage() {
 	}, [])
 
 	return (
-		<section>
-			<h1>Projects</h1>
-			<p>Explore my projects, experiments, and development progress.</p>
+		<section className="projects">
+			<header className="projects__header">
+				<h1>Projects</h1>
+				<p>Explore my projects, experiments, and development progress.</p>
+			</header>
 
-			{isLoading && <p>Loading projects...</p>}
+
+			{isLoading && <p role="status">Loading projects...</p>}
 
 			{error && <p role="alert">{error}</p>}
 
@@ -47,9 +50,11 @@ function ProjectsPage() {
 			)}
 
 			{!isLoading && !error && projects.length > 0 && (
-				projects.map((project) => (
-					<ProjectCard key={project.id} project={project} />
-				))
+				<div className="projects__grid">
+					{projects.map((project) => (
+						<ProjectCard key={project.id} project={project} />
+					))}
+				</div>
 			)}
 		</section>
 	)
