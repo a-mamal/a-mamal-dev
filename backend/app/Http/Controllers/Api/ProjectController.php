@@ -17,4 +17,12 @@ class ProjectController extends Controller
 			->get()
 		);
 	}
+
+	// Return an individual project identified by its slug.
+	public function show(Project $project)
+	{
+		$project->loadExists('documentationPages');
+
+		return new ProjectResource($project);
+	}
 }

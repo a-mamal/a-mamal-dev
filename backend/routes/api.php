@@ -10,6 +10,7 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::get('/projects', [ProjectController::class, 'index']);
+Route::get('/projects/{project:slug}', [ProjectController::class, 'show']);
 
 // Documentation pages belong to a project, so their URLs start with the project's slug.
 Route::get('/projects/{project:slug}/documentation', [DocumentationPageController::class, 'index']);
