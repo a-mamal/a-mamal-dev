@@ -9,6 +9,7 @@ import DocumentationProjectPage from './pages/DocumentationProjectPage'
 import HomePage from './pages/HomePage'
 import LogbookPage from './pages/LogbookPage'
 import ProjectsPage from './pages/ProjectsPage'
+import ProjectDetailsPage from './pages/ProjectDetailsPage'
 
 function App() {
 	return (
@@ -29,6 +30,10 @@ function App() {
 					/>
 					<Route path="/logbook" element={<LogbookPage />} />
 					<Route path="/projects" element={<ProjectsPage />} />
+					<Route
+						path="/projects/:projectSlug"
+						element={<ProjectDetailsPage />}
+					/>
 				</Route>
 			</Routes>
 		</BrowserRouter>
