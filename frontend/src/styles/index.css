@@ -202,3 +202,22 @@ hr {
 	border: 0;
 	border-top: 1px solid var(--color-border);
 }
+
+/*
+==================================================
+	Utilities
+==================================================
+*/
+
+/* Hide content visually but keep it available to screen readers. */
+.visually-hidden:where(:not(:focus-within, :active)) {
+  position: absolute;
+  clip-path: inset(50%);
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+}

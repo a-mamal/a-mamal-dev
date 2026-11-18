@@ -1,3 +1,4 @@
+import { ExternalLink } from 'lucide-react'
 import { Link } from 'react-router'
 
 function HomePage() {
@@ -21,6 +22,26 @@ function HomePage() {
 						Browse projects
 					</Link>
 				</div>
+			</section>
+
+			<section className="home-portfolio" aria-labelledby="portfolio-title">
+				<h2 id="portfolio-title">My professional portfolio</h2>
+
+				<p>
+					a-mamal.dev documents the journey. a-mamal.com is the curated
+					version: selected projects, skills and experience.
+				</p>
+
+				<a
+					className="home-portfolio__link"
+					href="https://a-mamal.com/"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					Visit a-mamal.com
+					<ExternalLink aria-hidden="true" size={16} />
+					<span className="visually-hidden">(opens in a new tab)</span>
+				</a>
 			</section>
 		</section>
 	)
