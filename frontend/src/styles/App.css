@@ -370,6 +370,84 @@
 
 /*
 ==================================================
+	Home
+==================================================
+*/
+
+.home {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-xxl);
+	max-width: 60rem;
+}
+
+/* Hero */
+
+.home-hero {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-md);
+	max-width: 48rem;
+
+	h1 {
+		font-size: clamp(var(--font-size-xxl), 4vw, 3rem);
+		line-height: var(--line-height-md);
+		text-wrap: balance;
+	}
+
+	.home-hero__eyebrow {
+		padding-left: var(--space-sm);
+		border-left: 3px solid var(--color-accent);
+
+		font-family: var(--font-mono);
+		font-size: var(--font-size-sm);
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--color-text-muted);
+	}
+
+	.home-hero__description {
+		font-size: var(--font-size-lg);
+		color: var(--color-text-muted);
+	}
+
+	.home-hero__actions {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: var(--space-md);
+	}
+
+	.home-hero__primary {
+		padding: var(--space-xs) var(--space-md);
+
+		border-radius: 0.35rem;
+		background-color: var(--color-primary);
+
+		color: var(--color-white);
+		font-size: var(--font-size-lg);
+		font-weight: 600;
+		text-decoration: none;
+
+		&:hover {
+			background-color: var(--color-onyx);
+		}
+	}
+
+	.home-hero__secondary {
+		color: var(--color-text-primary);
+		font-weight: 600;
+		text-underline-offset: 0.25em;
+	}
+
+	a:focus-visible {
+		outline: 2px solid var(--color-primary);
+		outline-offset: 3px;
+	}
+}
+
+/*
+==================================================
 	Projects
 ==================================================
 */
