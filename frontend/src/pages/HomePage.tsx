@@ -1,9 +1,9 @@
-import { ExternalLink } from 'lucide-react'
+import { ArrowRight, ExternalLink } from 'lucide-react'
 import { Link } from 'react-router'
 
 function HomePage() {
 	return (
-		<section className="home">
+		<div className="home">
 			<section className="home-hero" aria-labelledby="home-title">
 				<p className="home-hero__eyebrow">A space for learning in public</p>
 
@@ -24,6 +24,42 @@ function HomePage() {
 				</div>
 			</section>
 
+			<div className="home-panels">
+				<section
+					className="home-panel home-panel--documentation"
+					aria-labelledby="documentation-title"
+				>
+					<h2 id="documentation-title">Documentation</h2>
+
+					<p>
+						How this site is built: setup, architecture and the decisions
+						behind it, written as I go.
+					</p>
+
+					<Link className="home-panel__link" to="/documentation">
+						Browse all documentation
+						<ArrowRight aria-hidden="true" />
+					</Link>
+				</section>
+
+				<section
+					className="home-panel home-panel--logbook"
+					aria-labelledby="logbook-title"
+				>
+					<h2 id="logbook-title">Logbook</h2>
+
+					<p>
+						Thoughts, experiments, mistakes and lessons learned, plus Sherlock's Journal.
+						The first entries are on their way.
+					</p>
+
+					<Link className="home-panel__link" to="/logbook">
+						Open the Logbook
+						<ArrowRight aria-hidden="true" />
+					</Link>
+				</section>
+			</div>
+
 			<section className="home-portfolio" aria-labelledby="portfolio-title">
 				<h2 id="portfolio-title">My professional portfolio</h2>
 
@@ -43,7 +79,9 @@ function HomePage() {
 					<span className="visually-hidden">(opens in a new tab)</span>
 				</a>
 			</section>
-		</section>
+
+
+		</div>
 	)
 }
 
