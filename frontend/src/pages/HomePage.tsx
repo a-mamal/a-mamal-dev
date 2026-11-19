@@ -64,6 +64,21 @@ function HomePage() {
 				</section>
 			</div>
 
+			<section className="home-info" aria-labelledby="about-title">
+				<h2 id="about-title">About me</h2>
+
+				<p>
+					I'm Anastasia, the developer behind a-mamal.dev. I use this site to learn in
+					public: building projects, writing down what I learn, and keeping
+					the mistakes in view.
+				</p>
+
+				<Link className="home-info__link" to="/about">
+					More about me
+					<ArrowRight aria-hidden="true" />
+				</Link>
+			</section>
+
 			<section className="home-info" aria-labelledby="portfolio-title">
 				<h2 id="portfolio-title">My professional portfolio</h2>
 
