@@ -21,22 +21,28 @@ function truncateDescription(description: string, maxWords = 25): string {
 
 interface ProjectCardProps {
 	project: Project
+	headingLevel?: 'h2' | 'h3'
+	showHighlights?: boolean
 }
 
-function ProjectCard({ project }: ProjectCardProps) {
+function ProjectCard({ 
+	project, 
+	headingLevel: Heading = 'h2',
+	showHighlights = true, 
+}: ProjectCardProps) {
 	return (
 		<article className="project-card">
             <header className="project-card__header">
-                <h2 className="project-card__name">
-                    {project.name}
-                </h2>
+				<Heading className="project-card__name">
+					{project.name}
+				</Heading>
                 
                 <p className="project-card__status">
                     Status: {formatStatus(project.status)}
                 </p> 
             </header>
 
-			{project.highlights && project.highlights.length > 0 && (
+			{showHighlights && project.highlights && project.highlights.length > 0 && (
 				<ul className="project-card__highlights">
 					{project.highlights.map((highlight, index) => (
 						<li key={`${project.id}-highlight-${index}`}>
@@ -53,6 +59,7 @@ function ProjectCard({ project }: ProjectCardProps) {
             <Link 
                 className="project-card__link"
                 to={`/projects/${project.slug}`}
+				aria-label={`View project: ${project.name}`}
             >
                 View project
             </Link>
