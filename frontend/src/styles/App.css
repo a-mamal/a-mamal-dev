@@ -605,11 +605,15 @@
 
 @media (max-width: 768px) {
 	.home-panels {
-		grid-template-columns: 1fr;
+		grid-template-columns: minmax(0, 1fr);
 	}
 
 	.home-panel {
 		padding: var(--space-md);
+		
+		.home-panel__link {
+			padding: var(--space-xs);
+		}
 	}
 }
 
