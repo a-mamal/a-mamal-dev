@@ -22,9 +22,14 @@ function truncateDescription(description: string, maxWords = 25): string {
 interface ProjectCardProps {
 	project: Project
 	headingLevel?: 'h2' | 'h3'
+	showHighlights?: boolean
 }
 
-function ProjectCard({ project, headingLevel: Heading = 'h2' }: ProjectCardProps) {
+function ProjectCard({ 
+	project, 
+	headingLevel: Heading = 'h2',
+	showHighlights = true, 
+}: ProjectCardProps) {
 	return (
 		<article className="project-card">
             <header className="project-card__header">
@@ -37,7 +42,7 @@ function ProjectCard({ project, headingLevel: Heading = 'h2' }: ProjectCardProps
                 </p> 
             </header>
 
-			{project.highlights && project.highlights.length > 0 && (
+			{showHighlights && project.highlights && project.highlights.length > 0 && (
 				<ul className="project-card__highlights">
 					{project.highlights.map((highlight, index) => (
 						<li key={`${project.id}-highlight-${index}`}>
