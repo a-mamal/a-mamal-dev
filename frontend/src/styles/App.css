@@ -446,6 +446,39 @@
 	}
 }
 
+/* Featured projects */
+
+.featured-projects {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-md);
+
+	.project-card {
+		background-color: color-mix(in srgb, var(--color-primary) 6%, var(--color-surface));
+	}
+
+	.featured-projects__grid {
+		display: grid;
+		/* min(100%, 18rem) stops a card overflowing very narrow screens. */
+		grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+		gap: var(--space-md);
+	}
+
+	.featured-projects__link {
+		align-self: flex-start;
+
+		color: var(--color-text-primary);
+		font-weight: 600;
+		text-underline-offset: 0.25em;
+
+		&:focus-visible {
+			outline: 2px solid var(--color-primary);
+			outline-offset: 4px;
+			border-radius: 2px;
+		}
+	}
+}
+
 /* Portfolio bridge */
 
 .home-portfolio {
@@ -516,7 +549,7 @@
 	background-color: color-mix(in srgb, var(--panel-color) 20%, var(--color-surface));
 
 	text-align: center;
-	
+
 	p {
 		text-wrap: balance;
 		color: var(--color-text-muted);
