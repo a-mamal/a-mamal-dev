@@ -1,5 +1,7 @@
 import { ArrowRight, ExternalLink } from 'lucide-react'
 import { Link } from 'react-router'
+import FeaturedProjects from '../components/projects/FeaturedProjects'
+
 
 function HomePage() {
 	return (
@@ -23,6 +25,8 @@ function HomePage() {
 					</Link>
 				</div>
 			</section>
+
+			<FeaturedProjects />
 
 			<div className="home-panels">
 				<section
