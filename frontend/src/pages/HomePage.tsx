@@ -64,7 +64,7 @@ function HomePage() {
 				</section>
 			</div>
 
-			<section className="home-portfolio" aria-labelledby="portfolio-title">
+			<section className="home-info" aria-labelledby="portfolio-title">
 				<h2 id="portfolio-title">My professional portfolio</h2>
 
 				<p>
@@ -73,7 +73,7 @@ function HomePage() {
 				</p>
 
 				<a
-					className="home-portfolio__link"
+					className="home-info__link"
 					href="https://a-mamal.com/"
 					target="_blank"
 					rel="noopener noreferrer"

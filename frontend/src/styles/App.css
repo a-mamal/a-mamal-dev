@@ -479,9 +479,9 @@
 	}
 }
 
-/* Portfolio bridge */
+/* Home info */
 
-.home-portfolio {
+.home-info {
 	display: flex;
 	flex-direction: column;
 	gap: var(--space-sm);
@@ -494,7 +494,7 @@
 		color: var(--color-text-muted);
 	}
 
-	.home-portfolio__link {
+	.home-info__link {
 		display: inline-flex;
 		padding: var(--space-xs) var(--space-sm);
 		align-items: center;
